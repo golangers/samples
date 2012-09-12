@@ -1,0 +1,34 @@
+user {
+    "name" : <name>,
+    "email" : <email>,
+    "password" : <password>,
+    "status" : <status>,
+    "delete" : <delete>,
+    "create_time" : <create_time>,
+    "update_time" : <update_time>,
+}
+
+module {
+    "name" : <name>,
+    "path" : <path>,
+    "order" : <order>,
+    "status" : <status>,
+    "create_time" : <create_time>,
+    "update_time" : <update_time>,
+}
+
+role {
+    "name" : <name>,
+    "users" : []<user_name>,
+    "status" : <status>,
+    "right" : {
+        "scope" : <scope>,// 0=>action,1=>module,2=>app,3=>site
+        "modules" : []{
+            "module":<module_path>,
+            "actions" : []<action_name>,
+        }
+    },
+    "delete" : <delete>,
+    "create_time" : <create_time>,
+    "update_time" : <update_time>,
+}

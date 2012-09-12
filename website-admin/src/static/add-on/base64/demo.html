@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>JavaScript Base64 encode decode</title>
+<script type = "text/javascript" src="../jquery-1.5.1.min.js"></script>
+<script type = "text/javascript" src="./jquery.base64.min.js"></script>
+<script type="text/javascript">
+function decode(){
+	$('#b').val($.base64.encode($('#a').val()));
+}
+function encode(){
+	$('#a').val($.base64.decode($('#b').val()));
+}
+</script>
+</head>
+
+<body>
+<textarea id="a" rows="10" cols="30">Original string here...</textarea>
+<textarea id="b" rows="10" cols="30">Base64 string here...</textarea><br/>
+<p><input type="button" onclick='decode()' value="Encode"/><input type="button" onclick='encode()' value="Decode"/></p>
+</body>
+</html>

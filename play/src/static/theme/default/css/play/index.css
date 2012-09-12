@@ -1,0 +1,86 @@
+.CodeMirror,
+textarea.simple {
+	position: absolute;
+	top: 50px;
+	bottom: 25%;
+	left: 0;
+	right: 0;
+	background: #FFD;
+}
+.CodeMirror-scroll {
+	height: 100%;
+}
+textarea.simple {
+	font-family: monospace;
+	font-size: 13px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	resize: none;
+}
+.switch {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px;
+	text-align: right;
+	font-size: 12px;
+}
+.switch a {
+	color: blue;
+}
+.errLine {
+	background: #FDD !important;
+}
+#output {
+	font-family: monospace;
+	position: absolute;
+	top: 75%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 8px;
+}
+#output .loading {
+	color: #999;
+}
+#output.error {
+	color: #900;
+}
+#output pre {
+	margin: 0;
+}
+#head {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 50px;
+	font-size: 30px;
+	font-family: Georgia, serif;
+	padding: 8px;
+}
+#controls {
+	position: absolute;
+	left: 220px;
+	top: 9px;
+	height: 50px;
+}
+#controls input[type=button] {
+	height: 30px;
+	border: 1px solid #ccc;
+	font-size: 20px;
+	background: #eee;
+	color: black;
+}
+#controls input[type=button]:hover {
+	color: white;
+	background: #666;
+}
+#shareURL { 
+	width: 350px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	background: #eee;
+	color: black;
+}

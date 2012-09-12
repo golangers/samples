@@ -1,0 +1,99 @@
+body {
+}
+
+
+ul.dropdown-menu {
+	min-width: 100px;
+}
+
+.login-box {
+	padding: 50px 0;
+	background-color: white;
+}
+
+div.container {
+	width: 98%;
+}
+
+.c-sidebar-nav {
+	padding: 9px 0;
+}
+
+#left-column {
+	position:fixed;
+	left: -10px;
+}
+
+#chat-column {
+	position: fixed;
+	background-color: whiteSmoke;
+	left: 220px;
+	overflow:auto;
+}
+
+#right-column {
+	position:fixed;
+	right: 10px;
+}
+
+#input-box {
+	position:fixed;
+	bottom: 0px;
+	left: 220px;
+	height: 45px;
+	background-color: #DDD;
+}
+
+.post-form{
+	margin: 10px 10px;
+}
+
+.separator {
+	border-bottom: 1px solid #222;
+}
+
+#chat-column ul{
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+div.message-container{
+	position:relative;
+	line-height: 20px;
+	padding: 6px 10px;
+	border-bottom: 1px solid #DDD;
+}
+
+div.msg-time{
+	position:absolute;
+	top:7px;
+	right:10px;
+	font-size: 11px;
+	color: #999;
+}
+
+div.message{
+	margin-right:100px;
+}
+
+#chat-column .userpic{
+	float:left;
+	margin-right:5px;
+}
+
+li.user-online {
+	margin-bottom: 5px;
+}
+
+li.user-online img {
+	margin-right: 5px;
+}
+
+#group-column {
+	left: 250px;
+	position: fixed;
+}
+
+.chat-room{
+	margin-bottom: 20px;
+}

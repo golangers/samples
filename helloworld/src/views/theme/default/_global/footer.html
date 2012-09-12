@@ -1,0 +1,13 @@
+{{define "footer"}}
+    <div class="container">
+        <hr>
+        <footer>
+          <p>{{.Config.Sitename}} 版权所有</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="{{.D.Static}}add-on/bootstrap-2.1/js/bootstrap.min.js"></script>{{if .D.GlobalJsFile}}
+    <script type="text/javascript" src="{{.D.GlobalJsFile}}"></script>{{end}}{{if .D.GlobalIndexJsFile}}
+    <script type="text/javascript" src="{{.D.GlobalIndexJsFile}}"></script>{{end}}{{if .D.IndexJsFile}}
+    <script type="text/javascript" src="{{.D.IndexJsFile}}"></script>{{end}}
+    </body>
+</html>{{end}}

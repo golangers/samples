@@ -1,0 +1,20 @@
+{{template "main_header" .}}
+
+<ul class="guests">
+    {{ range $guest := .D.Body }}
+    <li>
+    <p>By: {{ $guest.Name }}, <time>{{ $guest.Timestamp }}</time></p>
+    <blockquote>{{ $guest.Message }}</blockquote>
+    </li>
+    {{ end }}
+</ul>
+
+<hr>
+
+<form action="{{ .Siteroot }}sign" method="POST">
+    <p>Name: <input type="text" name="name"></p>
+    <p>Message: <textarea name="message" rows="10" cols="40"></textarea></p>
+    <p><button>Sign</button></p>
+</form>
+
+{{template "main_footer" .}}

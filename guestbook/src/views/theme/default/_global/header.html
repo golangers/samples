@@ -1,0 +1,25 @@
+{{define "header"}}<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>{{with .D.Title}}{{.}} - {{end}}{{.Config.Sitename}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{.Sitename}}">
+        <meta name="author" content="{{.Config.Author}}">
+        <meta name="QQ" content="{{.Config.QQ}}">
+        <meta name="QQGroup" content="{{.Config.QQGroup}}">
+        {{if .D.GlobalCssFile}}
+            <link href="{{.D.GlobalCssFile}}" rel="stylesheet">
+        {{end}}
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        {{if .D.GlobalIndexCssFile}}
+            <link href="{{.D.GlobalIndexCssFile}}" rel="stylesheet">
+        {{end}}
+        {{if .D.IndexCssFile}}
+            <link href="{{.D.IndexCssFile}}" rel="stylesheet">
+        {{end}}
+    </head>
+    <body>
+{{end}}

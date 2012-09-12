@@ -1,0 +1,12 @@
+{{define "footer"}}
+        </div>
+        <div class="foot">
+            Copyright&copy; simple-todo by
+            <a href="https://github.com/leetaifook/golanger" target="_blank">golanger</a>
+        </div>
+    </div>{{if .D.GlobalJsFile}}
+    <script type="text/javascript" src="{{.D.GlobalJsFile}}"></script>{{end}}{{if .D.GlobalIndexJsFile}}
+    <script type="text/javascript" src="{{.D.GlobalIndexJsFile}}"></script>{{end}}{{if .D.IndexJsFile}}
+    <script type="text/javascript" src="{{.D.IndexJsFile}}"></script>{{end}}
+    </body>
+</html>{{end}}

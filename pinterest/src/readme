@@ -1,0 +1,33 @@
+Copyright (c) 2012 The Golanger Authors. All rights reserved.
+
+Pinterest Example
+------------------
+
+图片上传的Demo
+采用轻量级数据库Sqlite
+默认用户名: root (参考config/site.yaml文件中的Environment)
+默认密码: admin
+
+## 运行
+./build.sh
+
+管理员登录: http://127.0.0.1:8083/admin/index.html
+登录后增加种类，然后再项目首页上传图片.
+
+
+Open Source License
+------------------------------------------------------------------------------------------
+This version of golanger framework is licensed under the terms of the Open Source GPL 3.0 license. 
+
+http://www.gnu.org/licenses/gpl.html
+
+Alternate Licensing
+------------------------------------------------------------------------------------------
+Commercial and OEM Licenses are available for an alternate download of golanger framework.
+This is the appropriate option if you are creating proprietary applications and you are 
+not prepared to distribute and share the source code of your application under the 
+GPL v3 license. 
+
+--
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT OF THIRD-PARTY INTELLECTUAL PROPERTY RIGHTS.  See the GNU General Public License for more details.

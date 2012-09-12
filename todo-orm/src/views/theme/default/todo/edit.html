@@ -1,0 +1,12 @@
+{{template "header" .}}
+<div class="box post">
+  <h2>修改</h2>
+  {{with .D.Body}}
+  <form action="?" method="post">
+    <input type="hidden" name="id" value="{{ .Id }}" />
+    <p><input type="text" name="title" class="long_txt" value="{{ .Title }}" /></p>
+    <p><input type="submit" class="submit" value="提交" /></p>
+  </form>
+  {{end}}
+</div>
+{{template "footer" .}}

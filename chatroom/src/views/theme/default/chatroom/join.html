@@ -1,0 +1,64 @@
+{{template "main_header" .}}
+<script type="text/javascript">
+	var WebSocketHost = "{{ .D.Body.WebSocketHost }}";
+	var Email = "{{ .D.Body.Email }}";
+</script>
+  <div class="container">
+
+		<div class="row">
+
+			<div id="left-column" class="span3">
+				<div class="well c-sidebar-nav">
+
+					<ul class="nav nav-list">
+						<li class="nav-header">Chats</li>
+						<li class="active">
+							<a href="javascript:void(0)">In Room</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="chat-column" class="span8">
+				<ul id="chat-messages">
+					<li>
+						<div class="message-container">
+							<strong>Welcome</strong>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+			<div id="input-box" class="span8">
+				<form id="msg_form" class="form-horizontal post-form">
+					<div class="input-append">
+				<input class="span7" id="appendedPrependedInput" size="16" type="text"><input type="submit" class="btn" value="Post" />
+			  </div>
+				</form>
+
+			</div>
+
+			<div id="right-column" class="span2">
+				<div class="well c-sidebar-nav">
+					<ul id="user-list" class="nav nav-list">
+						<li class="nav-header">Who is here?</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div> <!-- /container -->
+
+	<div id="msg-template" style="display:none">
+		<li>
+			<div class="message-container">
+				<div class="userpic"></div>
+				<div class="message">
+					<span class="user"></span>
+					<span class="content"></span>
+				</div>
+				<div class="msg-time"></div>
+			</div>
+		</li>
+	</div><!-- / -->
+{{template "main_footer" .}}

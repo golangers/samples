@@ -1,0 +1,11 @@
+{{define "footer"}}
+    <div id="footer">
+        <span id="copyright">
+            Copyright &copy; {{.Version}} {{.Config.Sitename}} 版权所有
+        </span>
+    </div>{{if .D.GlobalJsFile}}
+    <script type="text/javascript" src="{{.D.GlobalJsFile}}"></script>{{end}}{{if .D.GlobalIndexJsFile}}
+    <script type="text/javascript" src="{{.D.GlobalIndexJsFile}}"></script>{{end}}{{if .D.IndexJsFile}}
+    <script type="text/javascript" src="{{.D.IndexJsFile}}"></script>{{end}}
+    </body>
+</html>{{end}}

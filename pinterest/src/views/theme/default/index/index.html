@@ -1,0 +1,47 @@
+{{template "main_header" .}}
+    <div id="upload_block">
+        <form class="form-horizontal" id="uploadForm" enctype="multipart/form-data" method="POST" action="upload">
+            <input type="file" name="file" id="file"/>
+            <select id="class_select" name="class" class="">
+                <option value="0" selected="selected">种类</option>
+                {{range .D.Body.classes}}
+                <option value="{{.Id}}">{{.Name}}</option>
+                {{end}}
+            </select>
+            <input type="submit" id="submit" value="上传" />
+        </form>
+        <span id="tip" class="expand">上传文件</span>
+        <span id="upload" class="expand">+</span>
+    </div>
+
+    <div>
+        <ul class="classes">
+            <a href="/"><li key="0">所有</li></a>
+            {{range .D.Body.classes}}
+            <a href="?classId={{.Id}}"><li key="{{.Id}}">{{.Name}}</li></a>
+            {{end}}
+        </ul>
+    </div>
+    
+    <div id="container" class="transitions-enabled infinite-scroll clearfix gallery">
+    {{range .D.Body.images}}
+        <div class="box photo col2">
+            <div class="adds">
+                <span class="add left"></span>
+                <a href="/report?id={{.Id}}"><span class="add right">举报</span></a>
+            </div>
+            <a href="{{.Path}}{{.Name}}{{.Ext}}" rel="prettyPhoto[gallery2]"><img src="{{.Path}}{{.Name}}{{.Ext}}" /></a>
+        </div>
+    {{end}} 
+    </div> <!-- #container -->
+
+    <nav id="page-nav">
+        <a href="/page.html?page=2"></a>
+    </nav>
+    <script type="text/javascript" src="{{.D.Static}}add-on/masonry/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="{{.D.Static}}add-on/infinitescroll/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript" src="{{.D.Static}}add-on/prettyPhoto/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript">
+    $('ul.classes li[key={{.D.Body.current}}]').addClass("current");  
+    </script>
+{{template "main_footer" .}}

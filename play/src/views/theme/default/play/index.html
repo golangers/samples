@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Go Playground</title>
+        <link rel="stylesheet" href="{{.D.Static}}add-on/codemirror/lib/codemirror.css">
+		<link rel="stylesheet" href="{{.D.Static}}add-on/codemirror/theme/default.css">
+		<script src="{{.D.Static}}add-on/jquery/jquery-1.8.0.min.js"></script>
+		<script src="{{.D.Static}}add-on/codemirror/lib/codemirror.js"></script>
+
+        {{if .D.IndexCssFile}}
+        <link href="{{.D.IndexCssFile}}" rel="stylesheet">
+        {{end}}
+
+        {{if .D.IndexJsFile}}
+        <script src="{{.D.IndexJsFile}}"></script>
+        {{end}}
+
+		<script>
+		$(document).ready(function() {
+			playground({
+				"codeEl":     "#code",
+				"outputEl":   "#output",
+				"runEl":      "#run",
+				"fmtEl":      "#fmt",
+				"shareEl":    "#share",
+				"shareURLEl": "#shareURL",
+				"simple":     false
+			});
+		});
+		</script>
+	</head>
+	<body itemscope itemtype="http://schema.org/CreativeWork">
+		<div id="head" itemprop="name">Go Playground</div>
+		<div id="controls">
+			<input type="button" value="Run" id="run">
+			<input type="button" value="Format" id="fmt">
+			<input type="button" value="Share" id="share">
+			<input type="text" id="shareURL">
+		</div>
+		
+        <textarea itemprop="description" id="code" name="code"  autocorrect="off" autocomplete="off" autocapitalize="off">
+{{if .D.Body }}
+{{ .D.Body.code }}
+{{else}}
+package main
+
+import &#34;fmt&#34;
+
+func main() {
+	fmt.Println(&#34;Hello, Golanger&#34;)
+}
+{{end}}
+</textarea>
+		<div id="output"></div>
+		<img itemprop="image" src="http://golang.org/doc/gopher/project.png" style="display:none">
+	</body>
+</html>

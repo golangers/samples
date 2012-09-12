@@ -1,0 +1,62 @@
+{{template "header" .}}
+
+<table id="image_manage" class="table multi_table manage">
+    <thead>
+        <tr>
+            <th width="100">待审核图片</th>
+            <th>
+                操作
+                <a class="right" href="/admin/logout.html">Logout</a>
+                <a class="right" href="/" target="_blank">Home</a>
+            </th> 
+        </tr>
+    </thead>
+    <tbody>
+        {{range .D.Body.invalidImages}}
+        <tr> 
+            <input type="hidden" value="{{.Id}}">
+            <td align="center"><img width="50" height="50" src="{{.Path}}{{.Name}}{{.Ext}}" /></td>
+            <td>
+                <span op="img_delete" class="op link">删除</span>
+                <span op="img_recover" class="op link">恢复</span>
+            </td>
+        </tr>
+        {{end}}
+    </tbody>
+</table>
+
+<table id="class_manage" class="table multi_table manage">
+    <thead>
+        <tr>
+            <th width="100">种类</th>
+            <th>
+                操作
+                <span class="right tip">点击种类名进行修改</span>
+            </th> 
+        </tr>
+    </thead>
+    <tbody>
+        {{range .D.Body.classes}}
+        <tr> 
+            <input type="hidden" value="{{.Id}}">
+            <td align="center">
+                <input type="text" name="new_class_name" value="{{.Name}}">
+                </td>
+            <td>
+                <span op="class_delete" class="op link">删除</span>
+                <span op="class_edit" class="op link">修改</span>
+            </td>
+        </tr>
+        {{end}}
+        <tr>
+            <td align="center">
+                <input type="text" id="class_name" name="new_class_name" placeholder="新种类...">
+            </td>
+            <td>
+                <span op="class_add" class="op link">添加</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{{template "footer" .}}

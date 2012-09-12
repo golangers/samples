@@ -1,0 +1,78 @@
+{
+##
+#以下是全部可配置的配置项，如果希望使用系统默认值，请直接注视掉改行配置项即可
+#如: 
+#   #"Debug"                    : false,
+##
+
+#是否开启SESSION功能
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+"SupportSession"           : true,
+#是否开启自动生成HTML的功能
+#"AutoGenerateHtml"         : true,
+#自动生成HTML的周期。单位：秒
+#"AutoGenerateHtmlCycleTime": 3600,
+#生成静态html文件后是否需要自动跳转到静态页面
+#"AutoJumpToHtml"           : true,
+#是否开启调试功能
+#"Debug"                    : true,
+#静态资源目录
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+"StaticDirectory"          : "./static/",
+#模板主题目录
+"ThemeDirectory"           : "theme/",
+#模板主题
+"Theme"                    : "default",
+#静态资源Css存放目录
+"StaticCssDirectory"       : "css/",
+#静态资源Js存放目录
+"StaticJsDirectory"        : "js/",
+#静态资源Image存放目录
+"StaticImgDirectory"       : "img/",
+#静态资源Html存放目录,存放自动生成的html静态文件
+"HtmlDirectory"            : "html/",
+#模板目录
+"TemplateDirectory"        : "./views/",
+#存放全局模板的目录
+"TemplateGlobalDirectory"  : "_global/",
+#从全局模板目录检索的文件 “*”代表全部，“file,file”逗号分隔的代表只检索出这些文件
+"TemplateGlobalFile"       : "*",
+#临时目录
+"TemporaryDirectory"       : "./tmp/",
+#上传后保存的目录
+"UploadDirectory"          : "upload/",
+#默认索引的目录
+"IndexDirectory"           : "index/",
+#默认索引的文件名
+"IndexPage"                : "index.html",
+#站点根目录
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+"SiteRoot"                 : "/",
+#环境变量
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+"Environment"              : {
+    #是否需要开启权限检查
+    # *此配置项，建议初次按照或者在需要调试的时候关闭
+    "CheckRight" : "true"
+},
+#数据库地址
+"Database"                 : {
+    #MongoDB DNS
+    # *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+    "MongoDB" : "mongodb://127.0.0.1/website_admin"
+    #Mysql DNS
+    #"Mysql" : "tcp://127.0.0.1:3306/DatabaseName/user/password",
+},
+#自定义配置
+"Custom"                   : {
+    "Author" : "李伟@LeeTaiFook - http://weibo.com/leetaifook",
+    #QQ号
+    "QQ" : "20660991",
+    #GolangQQ群
+    "QQGroup" : "29994666",
+    #站点名
+    "Sitename" : "LeeTaiFook的轻量级GoLang开源Web框架",
+    "SESSION_UNAME" : "username",
+    "SESSION_UKEY" : "ukey"
+}
+}
