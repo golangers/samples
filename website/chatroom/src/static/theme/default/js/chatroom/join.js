@@ -26,6 +26,7 @@ $(function() {
 
         $("#msg-template .userpic").html("<img src='" + textMessage.UserInfo.Gravatar + "'>")
         $("#msg-template .msg-time").html(textMessage.Time);
+        $("#msg-template .user").html(textMessage.UserInfo.Name + ":");
         $("#msg-template .content").html(textMessage.Content);
         $("#chat-messages").append($("#msg-template").html());
         $('#chat-column')[0].scrollTop = $('#chat-column')[0].scrollHeight;
