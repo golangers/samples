@@ -53,6 +53,19 @@ chmod +x ./build.sh
     根据输出的端口 [port]
     http://localhost:[port]
 
+## Samples Online
+
+ * [chatroom.golanger.com](http://chatroom.golanger.com)
+ * [guestbook.golanger.com](http://guestbook.golanger.com)
+ * [helloworld.golanger.com](http://helloworld.golanger.com)
+ * [pinterest.golanger.com](http://pinterest.golanger.com)
+ * [play.golanger.com](http://play.golanger.com)
+ * [todo.golanger.com](http://todo.golanger.com)
+ * [website-admin.golanger.com](http://website-admin.golanger.com)
+    User: golanger
+    Password: leetaifook
+
+
 ## Wishlist
 
  * Validation -- 帮助验证管理
