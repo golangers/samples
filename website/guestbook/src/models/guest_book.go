@@ -1,7 +1,7 @@
 package models
 
 import (
-	"golanger.com/utils"
+	"golanger.com/framework/utils"
 	"labix.org/v2/mgo/bson"
 	"time"
 )

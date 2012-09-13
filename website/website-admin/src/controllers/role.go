@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"encoding/json"
-	. "golanger.com/middleware"
-	"golanger.com/utils"
+	. "golanger.com/framework/middleware"
+	"golanger.com/framework/utils"
 	"helper"
 	. "models"
 	"reflect"

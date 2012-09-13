@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"golanger.com/web"
+	"golanger.com/framework/web"
 	"net/http"
 )
 

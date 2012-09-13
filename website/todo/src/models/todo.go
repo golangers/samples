@@ -2,7 +2,7 @@ package models
 
 import (
 	"database/sql"
-	. "golanger.com/middleware"
+	. "golanger.com/framework/middleware"
 	"strconv"
 )
 
