@@ -56,14 +56,14 @@ chmod +x ./build.sh
 ## Samples Online
 
  * <a href="http://chatroom.golanger.com" target="_blank">chatroom.golanger.com</a>
- * [guestbook.golanger.com](http://guestbook.golanger.com)
- * [helloworld.golanger.com](http://helloworld.golanger.com)
- * [pinterest.golanger.com](http://pinterest.golanger.com)
- * [play.golanger.com](http://play.golanger.com)
- * [todo.golanger.com](http://todo.golanger.com)
- * [website-admin.golanger.com](http://website-admin.golanger.com)
-    User: golanger
-    Password: leetaifook
+ * <a href="http://guestbook.golanger.com" target="_blank">guestbook.golanger.com</a>
+ * <a href="http://helloworld.golanger.com" target="_blank">helloworld.golanger.com</a>
+ * <a href="http://pinterest.golanger.com" target="_blank">pinterest.golanger.com</a>
+ * <a href="http://play.golanger.com" target="_blank">play.golanger.com</a>
+ * <a href="http://todo.golanger.com" target="_blank">todo.golanger.com</a>
+ * <a href="http://website-admin.golanger.com" target="_blank">website-admin.golanger.com</a>
+    + User: test
+    + Password: 123456
 
 
 ## Wishlist
