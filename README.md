@@ -62,8 +62,8 @@ chmod +x ./build.sh
  * <a href="http://play.golanger.com" target="_blank">play.golanger.com</a>
  * <a href="http://todo.golanger.com" target="_blank">todo.golanger.com</a>
  * <a href="http://website-admin.golanger.com" target="_blank">website-admin.golanger.com</a>
-    + User: test
-    + Password: 123456
+     User: testgolanger
+     Password: golanger.com 
 
 
 ## Wishlist
