@@ -5,7 +5,6 @@ import (
 	"golanger.com/framework/utils"
 	"golanger.com/framework/web"
 	"helper"
-	"labix.org/v2/mgo/bson"
 	. "models"
 	"net/http"
 	"net/url"
@@ -106,7 +105,7 @@ func (a *Application) getModule(showAll bool) {
 						case "1": //module
 							if role.Right["modules"] != nil {
 								for _, module := range role.Right["modules"].([]interface{}) {
-									mod := module.(bson.M)
+									mod := module.(utils.M)
 									if mod["module"].(string) == col.Path {
 										cols = append(cols, col)
 										hasModule[col.Path] = true
@@ -116,7 +115,7 @@ func (a *Application) getModule(showAll bool) {
 						case "0": //action
 							if role.Right["modules"] != nil {
 								for _, module := range role.Right["modules"].([]interface{}) {
-									mod := module.(bson.M)
+									mod := module.(utils.M)
 									if len(mod["actions"].([]interface{})) > 0 {
 										if mod["module"].(string) == col.Path {
 											cols = append(cols, col)
@@ -148,7 +147,7 @@ func (a *Application) checkRight() {
 				} else {
 					if role.Right["modules"] != nil {
 						for _, mod := range role.Right["modules"].([]interface{}) {
-							m := mod.(bson.M)
+							m := mod.(utils.M)
 							for _, action := range m["actions"].([]interface{}) {
 								if reqAction == action.(string) {
 									hasRight = true
