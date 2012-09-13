@@ -4,6 +4,7 @@ import (
 	"fmt"
 	. "golanger.com/framework/middleware"
 	"helper"
+	"html/template"
 	. "models"
 	"net/http"
 )
@@ -48,6 +49,9 @@ func (p *PageIndex) Sign(w http.ResponseWriter, r *http.Request) {
 	if entry.Message == "" {
 		entry.Message = "Some dummy who forgot a message."
 	}
+
+	entry.Name = template.HTMLEscapeString(entry.Name)
+	entry.Message = template.HTMLEscapeString(entry.Message)
 
 	mgo := Middleware.Get("db").(*helper.Mongo)
 	coll := mgo.C(ColGuestBook)

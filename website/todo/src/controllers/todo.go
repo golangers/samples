@@ -5,6 +5,7 @@ import (
 	"fmt"
 	. "golanger.com/framework/middleware"
 	"golanger.com/framework/utils"
+	"html/template"
 	"models"
 	"net/http"
 	"strconv"
@@ -32,7 +33,7 @@ func (p *PageTodo) New(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
 		if title, ok := p.POST["title"]; ok {
 			todo := models.Todo{
-				Title:    title,
+				Title:    template.HTMLEscapeString(title),
 				PostDate: utils.NewTime().GetTimeToStr(time.Now().Unix()),
 			}
 			_, err := models.SaveTodo(todo)
@@ -65,7 +66,7 @@ func (p *PageTodo) Edit(w http.ResponseWriter, r *http.Request) {
 			id, _ := strconv.Atoi(sid)
 			todo := models.Todo{
 				Id:       id,
-				Title:    title,
+				Title:    template.HTMLEscapeString(title),
 				PostDate: utils.NewTime().GetTimeToStr(time.Now().Unix()),
 			}
 			_, err := models.UpdateTodo(todo)

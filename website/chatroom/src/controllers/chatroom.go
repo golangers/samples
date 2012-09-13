@@ -3,6 +3,7 @@ package controllers
 import (
 	"code.google.com/p/go.net/websocket"
 	"helper"
+	"html/template"
 	"net/http"
 	"strings"
 	"time"
@@ -53,7 +54,7 @@ func BuildConnection(ws *websocket.Conn) {
 	if email == "" {
 		return
 	}
-
+	email = template.HTMLEscapeString(email)
 	onlineUser := &OnlineUser{
 		InRoom:     runningActiveRoom,
 		Connection: ws,
@@ -156,7 +157,7 @@ func (this *OnlineUser) PullFromClient() {
 			TextMessage: TextMessage{
 				UserInfo: this.UserInfo,
 				Time:     humanCreatedAt(),
-				Content:  content,
+				Content:  template.HTMLEscapeString(content),
 			},
 		}
 		this.InRoom.Broadcast <- m
