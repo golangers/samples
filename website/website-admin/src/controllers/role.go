@@ -88,7 +88,8 @@ func (p *PageRole) Index() {
 	for _, module := range colModules {
 		if i, ok := p.Controller[module.Path]; ok {
 			modules[module.Path] = []string{}
-			rt := reflect.TypeOf(i)
+			rvpc := reflect.New(reflect.TypeOf(i))
+			rt := rvpc.Type()
 			for j := 0; j < rt.NumMethod(); j++ {
 				if _, ok := rAppType.MethodByName(rt.Method(j).Name); !ok {
 					modules[module.Path] = append(modules[module.Path], rt.Method(j).Name)
