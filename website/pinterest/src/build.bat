@@ -6,7 +6,11 @@ echo "Golanger Web Framework"
 echo "Golanger is a lightweight framework for writing web applications in Golang."
 
 set GOPATH=%PWD%\src\add-on;%PWD%
-cd %PWD%\src
+
+if not exist %PWD%\src\add-on\src\golanger.com\framework  (
+    echo "go get -u golanger.com/framework"
+    go get -u golanger.com/framework
+)
 
 if exist %APP% del %APP%
 

@@ -5,8 +5,13 @@ PWD=`pwd`/..
 
 echo "Golanger Web Framework"
 echo "Golanger is a lightweight framework for writing web applications in Golang."
+
 export GOPATH=${PWD}/src/add-on:${PWD}
-cd ${PWD}/src
+
+if [ ! -d ./add-on/src/golanger.com/framework ]; then
+    echo "go get -u golanger.com/framework"
+    go get -u golanger.com/framework
+fi
 
 if [ -f ${APP} ]; then
     rm ${APP}
