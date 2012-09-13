@@ -124,11 +124,7 @@ func (p *PagePlay) Share() {
 		return
 	}
 
-	var data string
-	for key, _ := range p.R.Form {
-		data = key
-		break
-	}
+	data := strings.TrimSpace(p.POST["body"])
 	resp, err := http.Post(SHARE, p.R.Header.Get("Content-type"), strings.NewReader(data))
 
 	if err != nil {

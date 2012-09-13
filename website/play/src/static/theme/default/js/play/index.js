@@ -228,9 +228,9 @@ function playground(opts) {
 			if (sharing) return;
 			sharing = true;
 			$.ajax("/share", {
-				processData: false,
-				data: body(),
+                data: {"body": body()},
 				type: "POST",
+                dataType: "json",
 				complete: function(xhr) {
 					sharing = false;
 					if (xhr.status != 200) {
