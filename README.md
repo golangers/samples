@@ -55,7 +55,7 @@ chmod +x ./build.sh
 
 ## Samples Online
 
- * [chatroom.golanger.com](http://chatroom.golanger.com)
+ * <a href="http://chatroom.golanger.com" target="_blank">chatroom.golanger.com</a>
  * [guestbook.golanger.com](http://guestbook.golanger.com)
  * [helloworld.golanger.com](http://helloworld.golanger.com)
  * [pinterest.golanger.com](http://pinterest.golanger.com)
