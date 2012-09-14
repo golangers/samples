@@ -3,7 +3,11 @@
         <hr>
         <footer>
           <p>{{.Config.Sitename}} 版权所有</p>
-          <p><a href="https://github.com/golangers">Golanger Web Framework</a></p>
+          <a href="https://github.com/golangers">Golanger Web Framework</a>
+          <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F63d3b7346a3c26abdf331bbc6ece09cc' type='text/javascript'%3E%3C/script%3E"));
+    </script>
         </footer>
     </div>
     {{if .D.GlobalJsFile}}
@@ -15,9 +19,5 @@
     {{if .D.IndexJsFile}}
         <script type="text/javascript" src="{{.D.IndexJsFile}}"></script>
     {{end}}
-    <script type="text/javascript">
-        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F786037d553e3621233698a27bb565292' type='text/javascript'%3E%3C/script%3E"));
-    </script>
     </body>
 </html>{{end}}
