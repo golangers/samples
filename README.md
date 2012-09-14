@@ -62,6 +62,9 @@ chmod +x ./build.sh
  * Hot Compile -- 代码或者模板修改后自动编译项目，你只需要刷新的你浏览器
  * Debug -- 快速定位问题
 
+## 性能测试
+ * [Golanger Using Apache Bench for Simple Load Testing](https://github.com/golangers/framework/wiki/Golanger-Using-Apache-Bench-for-Simple-Load-Testing)
+
 ## 开发者
  * Li Wei <lee@leetaifook.com>
  * Jiang Bian <borderj@gmail.com>
