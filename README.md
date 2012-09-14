@@ -10,7 +10,6 @@ Golanger is a lightweight framework for writing web applications in Go.
 
 
 ## 框架简单实现了MVC的设计方式
-
 ### Features
  * Routing
  * Controllers
@@ -18,104 +17,65 @@ Golanger is a lightweight framework for writing web applications in Go.
  * Session
  * Plugins
 
-
 ### 约定的命名规则：
-
-    Model: 存放在models目录中
-    Controller: 存放在controllers目录中
-    View: 存放在views目录中
-    静态文件放在static目录中
+ * Model: 存放在models目录中
+ * Controller: 存放在controllers目录中
+ * View: 存放在views目录中
+ * 静态文件放在static目录中
 
 ## 运行方法
-
-
 ### 安装：
-
-1.下载go安装包，部署go的编译环境
-
-2.安装相应的扩展包<非必须>
-
-3.执行初步命令
+ * 下载go安装包，部署go的编译环境
+ * 安装相应的扩展包<非必须>
+ * 执行初步命令
 
 ``` bash
 cd [path]/website/helloworld/src
 chmod +x ./build.sh
 ```
 
-4.编译并执行程序
+ * 编译并执行程序
 
 ``` bash
 ./build.sh
 ```
 
-5.打开浏览器访问
+ * 打开浏览器访问
 
-    根据输出的端口 [port]
-    http://localhost:[port]
+    + 根据输出的端口 [port]
+    + http://localhost:[port]
+
 
 ## Samples Online
-
- * <a href="http://chatroom.golanger.com" target="_blank">chatroom.golanger.com</a>
- * <a href="http://guestbook.golanger.com" target="_blank">guestbook.golanger.com</a>
- * <a href="http://helloworld.golanger.com" target="_blank">helloworld.golanger.com</a>
- * <a href="http://pinterest.golanger.com" target="_blank">pinterest.golanger.com</a>
- * <a href="http://play.golanger.com" target="_blank">play.golanger.com</a>
- * <a href="http://todo.golanger.com" target="_blank">todo.golanger.com</a>
- * <a href="http://website-admin.golanger.com" target="_blank">website-admin.golanger.com</a>
-     User: testgolanger
-     Password: testgolanger 
-
+ * <a href="http://chatroom.golanger.com" target="_blank">聊天室(chatroom)</a>
+ * <a href="http://guestbook.golanger.com" target="_blank">记事本(guestbook)</a>
+ * <a href="http://helloworld.golanger.com" target="_blank">Helloworld</a>
+ * <a href="http://pinterest.golanger.com" target="_blank">图片分享(pinterest)</a>
+ * <a href="http://play.golanger.com" target="_blank">Golang Play</a>
+ * <a href="http://todo.golanger.com" target="_blank">Todo List</a>
+ * <a href="http://website-admin.golanger.com" target="_blank">权限管理(website-admin)</a>. 
+   * User: testgolanger
+   * Password: testgolanger 
 
 ## Wishlist
-
  * Validation -- 帮助验证管理
  * Hot Compile -- 代码或者模板修改后自动编译项目，你只需要刷新的你浏览器
  * Debug -- 快速定位问题
 
-
-## 主要开发者
-```
-Li Wei <lee#leetaifook.com>
-Jiang Bian <borderj#gmail.com>
-```
-
+## 开发者
+ * Li Wei <lee@leetaifook.com>
+ * Jiang Bian <borderj@gmail.com>
 
 ## 联系方式
-
-
 ### WebSite
-
-```
-http://wWw.GoLangEr.Com
-```
-
-### 微博
-
-```
-新浪：http://weibo.com/golanger
-```
-
-### IM
-
-```
-QQ : 20660991
-QQ群 : 29994666
-Gtalk : lee#leetaifook.com 
-```
-
-### Email
-
-```
-lee#leetaifook.com
-borderj#gmail.com
-```
+ * <a href="http://golanger.com/framework" target="_blank">Golanger Web Framework</a>
+ * <a href="http://golanger.com" target="_blank">Golanger</a>
+ * <a href="http://weibo.com/golanger" target="_blank">新浪微博</a>
+ * QQ群: 29994666
 
 ### 邮件列表
-
-```
-https://groups.google.com/group/golang-china/
-golang-china@googlegroups.com
-```
+ * <a href="https://groups.google.com/group/golanger" target="_blank">Golanger邮件列表</a>
+ * <golanger@googlegroups.com>
 
 Open Source License
 ------------------------------------------------------------------------------------------
