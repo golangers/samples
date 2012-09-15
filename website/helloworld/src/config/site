@@ -6,6 +6,8 @@
 #是否开启SESSION功能
 # *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
 "SupportSession"           : true,
+#是否支持模板渲染,一般在开发纯粹的web server的时候会关闭，来提高性能
+"SupportTemplate"           : true,
 #是否开启自动生成HTML的功能
 #"AutoGenerateHtml"         : true,
 #自动生成HTML的周期。单位：秒

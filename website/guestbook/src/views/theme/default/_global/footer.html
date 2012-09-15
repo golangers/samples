@@ -4,20 +4,15 @@
         <footer>
           <p>{{.Config.Sitename}} 版权所有</p>
           <a href="https://github.com/golangers">Golanger Web Framework</a>
-          <script type="text/javascript">
-        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F63d3b7346a3c26abdf331bbc6ece09cc' type='text/javascript'%3E%3C/script%3E"));
-    </script>
         </footer>
     </div>
-    {{if .D.GlobalJsFile}}
-        <script type="text/javascript" src="{{.D.GlobalJsFile}}"></script>
-    {{end}}
-    {{if .D.GlobalIndexJsFile}}
-        <script type="text/javascript" src="{{.D.GlobalIndexJsFile}}"></script>
-    {{end}}
-    {{if .D.IndexJsFile}}
-        <script type="text/javascript" src="{{.D.IndexJsFile}}"></script>
-    {{end}}
+    {{if .D.GlobalJsFile}}<script type="text/javascript" src="{{.D.GlobalJsFile}}"></script>{{end}}
+    {{if .D.GlobalIndexJsFile}}<script type="text/javascript" src="{{.D.GlobalIndexJsFile}}"></script>{{end}}
+    {{if .D.IndexJsFile}}<script type="text/javascript" src="{{.D.IndexJsFile}}"></script>{{end}}
+    <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb2d26181b57bf362d4c4a48df72d6c6d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
     </body>
 </html>{{end}}

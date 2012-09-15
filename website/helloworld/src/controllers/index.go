@@ -23,6 +23,10 @@ func (p *PageIndex) Index(w http.ResponseWriter, r *http.Request) {
 		"b": "c",
 	}
 	p.SESSION["Int64"] = time.Now().UnixNano()
+
+	p.Body = func(a, b int) int {
+		return a + b
+	}
 }
 
 func (p *PageIndex) TestPage(w http.ResponseWriter, r *http.Request) {
