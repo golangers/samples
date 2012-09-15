@@ -37,3 +37,6 @@ TAGS
 # For golang:
 pkg
 bin
+
+# For golanger:
+golanger.com
