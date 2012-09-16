@@ -20,7 +20,7 @@ type Application struct {
 }
 
 var App = &Application{
-	Page: web.NewPage(web.PageParam{}),
+	Page: web.NewPage(web.PageParam{TimerDuration: "2h"}),
 }
 
 func (a *Application) Init() {

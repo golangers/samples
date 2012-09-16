@@ -14,5 +14,5 @@ func (a *Application) Init(w http.ResponseWriter, r *http.Request) {
 }
 
 var App = &Application{
-	Page: web.NewPage(web.PageParam{}),
+	Page: web.NewPage(web.PageParam{TimerDuration: "2h"}),
 }
