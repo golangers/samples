@@ -17,7 +17,7 @@
 #生成静态html文件后是否需要自动跳转到静态页面
 #"AutoJumpToHtml"           : true,
 #是否开启调试功能
-"Debug"                    : true,
+#"Debug"                    : true,
 #静态资源目录
 # *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
 "StaticDirectory"          : "./static/",
