@@ -67,13 +67,13 @@
 },
 #自定义配置
 "Custom"                   : {
-    "Author" : "李伟@LeeTaiFook - http://weibo.com/leetaifook",
+    "Author" : "The Golanger Authors - https://github.com/golangers/",
     #QQ号
     "QQ" : "20660991",
     #GolangQQ群
     "QQGroup" : "29994666",
     #站点名
-    "Sitename" : "LeeTaiFook的轻量级GoLang开源Web框架",
+    "Sitename" : "Golanger Web Framework",
     "SESSION_UNAME" : "username",
     "SESSION_UKEY" : "ukey"
 }
