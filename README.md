@@ -42,8 +42,8 @@ chmod +x ./build.sh
 
  * 打开浏览器访问
 
->    根据输出的端口 [port]
->    http://localhost:[port]
+    * 根据输出的端口 [port]
+    * http://localhost:[port]
 
 ## Golanger目录结构说明
 
@@ -70,14 +70,15 @@ Golanger约定的命名规则：
     │   ├── 404.go                  // 404逻辑处理页面
     │   ├── app.go                  // 控制器(Controller)模块的初始化， 每一个逻辑处理页面都要注册app.go
     │   └── index.go                // 
-                        // 1. 习惯性的将文件名与要处理的url路径名相同(通过App.RegisterController注册路径的Handle)，来清晰的划分功能模块， 
-                        // 注册响应要处理的url目录路径，然后处理子页面的逻辑。 
-                        // 2. 文件名和App.RegisterController注册的路径的Handle可以不同，主要依据App.RegisterController注册的路径的Handle。 
-                        // 3. 每个模块用一个文件名，用来功能性分离， 让结构更清晰而已。
+                     // 1. 习惯性的将文件名与要处理的url路径名相同(通过App.RegisterController注册路径的Handle)，来清晰的划分功能模块， 
+                     // 注册响应要处理的url目录路径，然后处理子页面的逻辑。 
+                     // 2. 文件名和App.RegisterController注册的路径的Handle可以不同，主要依据App.RegisterController注册的路径的Handle。 
+                     // 3. 每个模块用一个文件名，用来功能性分离， 让结构更清晰而已。
     ├── data                        // 存放App自有数据的目录
     ├── doc.go                      // Go的文档文件
     ├── helper                      // 助手模块, add-on里面的第三方库的包含, helper可以对它做二次封装。比如: website-admin 就对mgo进行了二次封装，方便以后的扩展。
-    ├── main.go                     // 项目启动文件，配置监听端口，配置文件，如果需要nginx之类的程序处理静态文件，可以关闭 App.HandleFavicon() 和 App.HandleStatic()。支持无需停止程序，动态修改生效(除特殊说明的配置项)
+    ├── main.go                     // 项目启动文件，配置监听端口，配置文件，如果需要nginx之类的程序处理静态文件，
+                    //可以关闭 App.HandleFavicon() 和 App.HandleStatic()。支持无需停止程序，动态修改生效(除特殊说明的配置项)
     ├── models                      // 模型(Model)，编写程序应有的功能(实现算法等等)、数据管理和数据库设计(可以实现具体的功能) 
     │   └── table_name.go
     ├── readme                      // 项目说明文件
@@ -126,8 +127,8 @@ Golanger约定的命名规则：
  * <a href="http://todo.golanger.com" target="_blank">Todo List</a>
  * <a href="http://website-admin.golanger.com" target="_blank">权限管理(website-admin)</a>. 
 
->    User: testgolanger
->    Password: testgolanger 
+   * User: testgolanger
+   * Password: testgolanger 
 
 ## Wishlist
  * Validation -- 帮助验证管理
