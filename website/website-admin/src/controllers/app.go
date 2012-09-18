@@ -7,7 +7,6 @@ import (
 	"helper"
 	. "models"
 	"net/http"
-	"net/url"
 	"strconv"
 )
 
@@ -179,7 +178,7 @@ func (a *Application) checkLogin() bool {
 		}
 	} else {
 		if a.R.URL.Path != "/login.html" {
-			http.Redirect(a.RW, a.R, "/login.html?back_url="+url.QueryEscape(a.R.URL.String()), http.StatusFound)
+			http.Redirect(a.RW, a.R, "/login.html?back_url="+a.R.URL.String(), http.StatusFound)
 			a.Close = true
 		}
 	}
