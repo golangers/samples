@@ -1,5 +1,4 @@
-<!doctype html>
-<html>
+{{template "header" .}}
 	<head>
 		<title>Go Playground</title>
         <link rel="stylesheet" href="{{.D.Static}}add-on/codemirror/lib/codemirror.css">
@@ -30,7 +29,7 @@
 		</script>
 	</head>
 	<body itemscope itemtype="http://schema.org/CreativeWork">
-		<div id="head" itemprop="name">Go Playground</div>
+		<div id="head" itemprop="name"><a href="https://github.com/golangers">Go Playground</a></div>
 		<div id="controls">
 			<input type="button" value="Run" id="run">
 			<input type="button" value="Format" id="fmt">
@@ -52,9 +51,4 @@ func main() {
 {{end}}
 </textarea>
 		<div id="output"></div>
-        <script type="text/javascript">
-            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F63d3b7346a3c26abdf331bbc6ece09cc' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-	</body>
-</html>
+{{template "footer" .}}
