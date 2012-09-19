@@ -2,16 +2,16 @@
 <div class="hero-unit">
 	<div class="row-fluid">
 		<div align="left">
-			<input class="btn btn-success" type="button" id="create_user" value="新建用户">
+			<input class="btn btn-success" type="button" id="create_user" value="Create User">
 		</div><br/>
 		<table class="table table-striped table-bordered table-condensed">
 	  		<thead>
 		    	<tr>
-		      		<th>用户名</th>
-		     		<th>邮箱地址</th>
-		     		<th>创建时间</th>
-		     		<th>最后更新</th>
-		     		<th>操作</th>
+		      		<th>User</th>
+		     		<th>Email</th>
+		     		<th>Create Time</th>
+		     		<th>Last Update</th>
+		     		<th>Operation</th>
 		    	</tr>
 	  		</thead>
 	  		<tbody>
@@ -22,9 +22,9 @@
 	      			<td>{{GetTimeToStr .Create_time}}</td>
 	      			<td>{{GetTimeToStr .Update_time}}</td>
 	      			<td>
-	      				<input class="btn btn-danger" type="button" op="user_delete" value="删除">
-	      				<input class="btn btn-info" type="button" op="user_update" value="修改">
-	      				<input class="btn btn-warning" type="button" op="user_stop" value="{{if .Status}}停用{{else}}启用{{end}}">
+	      				<input class="btn btn-danger" type="button" op="user_delete" value="Delete">
+	      				<input class="btn btn-info" type="button" op="user_update" value="Edit">
+	      				<input class="btn btn-warning" type="button" op="user_stop" value="{{if .Status}}Disable{{else}}Enable{{end}}">
 	      			</td>
 	    		</tr>
 	    		{{end}}
@@ -36,18 +36,18 @@
 <div class="modal" style="display: none" id="deleteModal">
 	<div class="modal-header">
 		<a class="close" data-dismiss="modal">×</a>
-		<h3>是否确认删除？</h3>
+		<h3>Are you sure to delete？</h3>
 	</div>
 	<div class="modal-footer">
-		<input class="btn btn-danger" type="button" id="user_delete_sure" value="确认删除">
-		<a href="#" class="btn btn-primary" data-dismiss="modal">取消</a>
+		<input class="btn btn-danger" type="button" id="user_delete_sure" value="Confirm deletion">
+		<a href="#" class="btn btn-primary" data-dismiss="modal">Cancel</a>
 	</div>
 </div>
 
 <div class="modal" style="display: none" id="updateModal">
 	<div class="modal-header">
 		<a class="close" data-dismiss="modal">×</a>
-		<h3>修改账户信息</h3>
+		<h3>Edit Account Info</h3>
 	</div>
 
 	<div class="hero-unit">
@@ -56,22 +56,22 @@
 	            <form class="form-horizontal" id="update">
 	                <fieldset id="fieldset">
 	                    <div class="control-group">
-	                        <label class="control-label" for="email">邮&nbsp&nbsp&nbsp箱</label>
+	                        <label class="control-label" for="email">Email</label>
 	                        <div class="controls">
-	                            <input class="input-large" name="email" type="email" placeholder="邮箱">
+	                            <input class="input-large" name="email" type="email" placeholder="email">
 	                            <span class="help-inline" style="display:none"></span>
 	                        </div>
 	                    </div>
 	                    <div class="control-group">
-	                        <label class="control-label" for="password">密&nbsp&nbsp&nbsp码</label>
+	                        <label class="control-label" for="password">Password</label>
 	                        <div class="controls">
-	                            <input class="input-large" name="password" type="password" placeholder="密码">
+	                            <input class="input-large" name="password" type="password" placeholder="password">
 	                            <span class="help-inline" style="display:none"></span>
 	                        </div>
 	                    </div>
 	                    <div class="form-actions">
-	                        <button type="button" id="btn_update" class="btn btn-large btn-primary">更新</button>
-	                        <button type="reset" id="btn_cancel" class="btn btn-large btn-inverse">取消</button>
+	                        <button type="button" id="btn_update" class="btn btn-large btn-primary">Update</button>
+	                        <button type="reset" id="btn_cancel" class="btn btn-large btn-inverse">Cancel</button>
 	                    </div>
 	                </fieldset>
 	            </form>
@@ -83,11 +83,11 @@
 <div class="modal" style="display: none" id="stopModal">
 	<div class="modal-header">
 		<a class="close" data-dismiss="modal">×</a>
-		<h3>是否确认停用？</h3>
+		<h3>Are you sure to disable？</h3>
 	</div>
 	<div class="modal-footer">
-		<input class="btn btn-danger" type="button" id="user_stop_sure" value="确认停用">
-		<a href="#" class="btn btn-primary" data-dismiss="modal">取消</a>
+		<input class="btn btn-danger" type="button" id="user_stop_sure" value="Confirm Disable">
+		<a href="#" class="btn btn-primary" data-dismiss="modal">Cancel</a>
 	</div>
 </div>
 
@@ -95,7 +95,7 @@
 <div class="modal" style="display: none" id="createModal">
 	<div class="modal-header">
 		<a class="close" data-dismiss="modal">×</a>
-		<h3>新建用户</h3>
+		<h3>Create User</h3>
 	</div>
 	
 	<div class="hero-unit">
@@ -104,29 +104,29 @@
 	            <form class="form-horizontal" id="create">
 	                <fieldset>
 	                    <div class="control-group">
-	                        <label class="control-label" for="username">用户名</label>
+	                        <label class="control-label" for="username">Username</label>
 	                        <div class="controls">
-	                            <input class="input-large" name="username" type="text" placeholder="用户名">
+	                            <input class="input-large" name="username" type="text" placeholder="username">
 	                            <span class="help-inline" style="display:none"></span>
 	                        </div>
 	                    </div>
 	                    <div class="control-group">
-	                        <label class="control-label" for="email">邮&nbsp&nbsp&nbsp箱</label>
+	                        <label class="control-label" for="email">Email</label>
 	                        <div class="controls">
-	                            <input class="input-large" name="newemail" type="email" placeholder="邮箱">
+	                            <input class="input-large" name="newemail" type="email" placeholder="email">
 	                            <span class="help-inline" style="display:none"></span>
 	                        </div>
 	                    </div>
 	                    <div class="control-group">
-	                        <label class="control-label" for="password">密&nbsp&nbsp&nbsp码</label>
+	                        <label class="control-label" for="password">Password</label>
 	                        <div class="controls">
-	                            <input class="input-large" name="newpassword" type="password" placeholder="密码">
+	                            <input class="input-large" name="newpassword" type="password" placeholder="password">
 	                            <span class="help-inline" style="display:none"></span>
 	                        </div>
 	                    </div>
 	                    <div class="form-actions">
-	                        <button type="button" id="btn_create" class="btn btn-large btn-primary">创建</button>
-	                        <button type="reset" id="btn_cancel_create" class="btn btn-large btn-inverse">重置</button>
+	                        <button type="button" id="btn_create" class="btn btn-large btn-primary">Create</button>
+	                        <button type="reset" id="btn_cancel_create" class="btn btn-large btn-inverse">Reset</button>
 	                    </div>
 	                </fieldset>
 	            </form>
