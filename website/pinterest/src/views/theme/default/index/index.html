@@ -3,20 +3,20 @@
         <form class="form-horizontal" id="uploadForm" enctype="multipart/form-data" method="POST" action="upload">
             <input type="file" name="file" id="file"/>
             <select id="class_select" name="class" class="">
-                <option value="0" selected="selected">种类</option>
+                <option value="0" selected="selected">Type</option>
                 {{range .D.Body.classes}}
                 <option value="{{.Id}}">{{.Name}}</option>
                 {{end}}
             </select>
-            <input type="submit" id="submit" value="上传" />
+            <input type="submit" id="submit" value="Upload" />
         </form>
-        <span id="tip" class="expand">上传文件</span>
+        <span id="tip" class="expand">Upload File</span>
         <span id="upload" class="expand">+</span>
     </div>
 
     <div>
         <ul class="classes">
-            <a href="/"><li key="0">所有</li></a>
+            <a href="/"><li key="0">All</li></a>
             {{range .D.Body.classes}}
             <a href="?classId={{.Id}}"><li key="{{.Id}}">{{.Name}}</li></a>
             {{end}}
@@ -28,7 +28,7 @@
         <div class="box photo col2">
             <div class="adds">
                 <span class="add left"></span>
-                <a href="/report?id={{.Id}}"><span class="add right">举报</span></a>
+                <a href="/report?id={{.Id}}"><span class="add right">Report</span></a>
             </div>
             <a href="{{.Path}}{{.Name}}{{.Ext}}" rel="prettyPhoto[gallery2]"><img src="{{.Path}}{{.Name}}{{.Ext}}" /></a>
         </div>

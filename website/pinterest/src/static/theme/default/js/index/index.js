@@ -15,8 +15,8 @@ $(function() {
         itemSelector: '.box',
         // selector for all items you'll retrieve
         loading: {
-            finishedMsg: '无更多的页面被加载',
-            msgText: "<em>加载中,请稍等...</em>",
+            finishedMsg: 'No More Page For Loading',
+            msgText: "<em>Loading...</em>",
             img: '/static/theme/default/img/global/loading.gif'
         }
     },
@@ -49,19 +49,19 @@ $(function() {
 
         var file = $("#file").val();
         if (file == "") {
-            alert("请选择文件后上传!");
+            alert("Please Select File!");
             return false;
         }
 
         var ext = getExt(file).toLowerCase();
         if (ext != ".jpg" && ext != ".png" && ext != ".gif") {
-            alert("请选择图片进行上传!");
+            alert("Please Select Images!");
             return false;
         }
 
         var classId = $("#class_select").val();
         if (classId == "0") {
-            alert("请选择图片种类!");
+            alert("Please Select Image Type!");
             return false;
         }
     });
@@ -85,7 +85,7 @@ $(function() {
         if($("#file").val()!=""){
             $("#filee").html($("#file").val());
         }else{
-            $("#filee").html("选择文件");
+            $("#filee").html("Select File");
         }
     });
 });

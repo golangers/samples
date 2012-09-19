@@ -1,8 +1,7 @@
 {{define "footer"}}
     <div id="footer">
         <span id="copyright">
-            Copyright &copy; {{.Version}} {{.Config.Sitename}} 版权所有
-            <a href="https://github.com/golangers">Golanger Web Framework</a>
+            Copyright &copy; {{.Version}} <a href="https://github.com/golangers" target="_blank">Golanger Web Framework</a>
         </span>
     </div>{{if .D.GlobalJsFile}}
     <script type="text/javascript" src="{{.D.GlobalJsFile}}"></script>{{end}}{{if .D.GlobalIndexJsFile}}

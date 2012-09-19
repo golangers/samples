@@ -1,3 +1,3 @@
 $(function(){
-    alert("这是自动加载的JS文件，JS文件名与模板文件同名即可！");
+    alert("The JavaScript File Will Auto Loading, When The Name Same with Template name!");
 });
