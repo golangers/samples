@@ -21,7 +21,7 @@ func (p *PageIndex) Index(w http.ResponseWriter, r *http.Request) {
 	mgo := Middleware.Get("db").(*helper.Mongo)
 	coll := mgo.C(ColGuestBook)
 
-	query := coll.Find(nil).Sort("-timestamp")
+	query := coll.Find(nil).Sort("-timestamp").Limit(20)
 
 	var entries []ModelGuestBook
 	if err := query.All(&entries); err != nil {
