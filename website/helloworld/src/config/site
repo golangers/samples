@@ -11,9 +11,6 @@
 "DefaultLanguage"           : "zh-cn",
 "DefaultLocalePath"         : "./locale/",
 "SupportTemplate"           : true,
-"SupportI18n"               : true,
-"DefaultLanguage"           : "zh-CN",
-"DefaultLocalePath"         : "./locale",
 #是否开启自动生成HTML的功能
 #"AutoGenerateHtml"         : true,
 #自动生成HTML的周期。单位：秒
