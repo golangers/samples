@@ -8,6 +8,9 @@
 "SupportSession"           : true,
 #是否支持模板渲染,一般在开发纯粹的web server的时候会关闭，来提高性能
 "SupportTemplate"           : true,
+"SupportI18n"               : true,
+"DefaultLanguage"           : "zh-CN",
+"DefaultLocalePath"         : "./locale",
 #是否开启自动生成HTML的功能
 #"AutoGenerateHtml"         : true,
 #自动生成HTML的周期。单位：秒
