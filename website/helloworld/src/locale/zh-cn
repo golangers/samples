@@ -1,7 +1,5 @@
 {
-    "zh-cn": {
-        "Hello": "你好，世界!",
-        "你好": "Hello!",
-        "Hello2": "HelloWorld2!"
-    }
+    "Hello": "你好，世界!",
+    "你好": "Hello!",
+    "Hello2": "HelloWorld2!"
 }
