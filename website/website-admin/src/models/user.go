@@ -1,13 +1,21 @@
 package models
 
 import (
+	"encoding/gob"
 	"golanger.com/framework/utils"
 )
 
+func init() {
+	gob.Register(ModelUser{})
+	gob.Register([]ModelUser{})
+}
+
 var (
 	ColUser = utils.M{
-		"name":  "user",
-		"index": []string{"name", "email", "status", "delete"},
+		"name": "user",
+		"index": []string{
+			"name,email,status,delete",
+		},
 	}
 )
 
@@ -24,11 +32,11 @@ user {
 }
 */
 type ModelUser struct {
-	Name        string
-	Email       string
-	Password    string
-	Status      byte
-	Delete      byte
-	Create_time int64
-	Update_time int64
+	Name        string `bson:"name"`
+	Email       string `bson:"email"`
+	Password    string `bson:"password"`
+	Status      byte   `bson:"status"`
+	Delete      byte   `bson:"delete"`
+	Create_time int64  `bson:"create_time"`
+	Update_time int64  `bson:"update_time"`
 }

@@ -37,6 +37,7 @@ func (p *PageInstall) Index() {
 		password := "leetaifook"
 		passwordMd5 := utils.Strings(password).Md5()
 		tnow := time.Now()
+
 		mgoServer.C(ColUser).Insert(&ModelUser{
 			Email:       email,
 			Name:        username,

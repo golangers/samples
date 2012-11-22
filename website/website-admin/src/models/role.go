@@ -1,13 +1,21 @@
 package models
 
 import (
+	"encoding/gob"
 	"golanger.com/framework/utils"
 )
 
+func init() {
+	gob.Register(ModelRole{})
+	gob.Register([]ModelRole{})
+}
+
 var (
 	ColRole = utils.M{
-		"name":  "role",
-		"index": []string{"name", "status", "right.scope", "right.modules.module", "delete"},
+		"name": "role",
+		"index": []string{
+			"name,status,right.scope,right.modules.module,delete",
+		},
 	}
 )
 
@@ -30,11 +38,11 @@ role {
 }
 */
 type ModelRole struct {
-	Name        string
-	Users       []string
-	Status      byte
-	Right       utils.M
-	Delete      byte
-	Create_time int64
-	Update_time int64
+	Name        string   `bson:"name"`
+	Users       []string `bson:"users"`
+	Status      byte     `bson:"status"`
+	Right       utils.M  `bson:"right"`
+	Delete      byte     `bson:"delete"`
+	Create_time int64    `bson:"create_time"`
+	Update_time int64    `bson:"update_time"`
 }

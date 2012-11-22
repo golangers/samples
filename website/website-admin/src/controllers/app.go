@@ -28,20 +28,17 @@ func (a *Application) Init() {
 	if a.OffLogin || a.checkLogin() {
 		checkRight, _ := strconv.ParseBool(a.Environment["CheckRight"])
 
-		if checkRight {
+		if !checkRight {
+			a.getModule(true)
+		} else {
 			a.getRole()
 			a.getModule(false)
 
 			if !a.OffRight {
 				a.checkRight()
 			}
-		} else {
-			a.getModule(true)
 		}
 	}
-
-	a.OffLogin = false
-	a.OffRight = false
 }
 
 func (a *Application) getRole() {
@@ -79,7 +76,6 @@ func (a *Application) getModule(showAll bool) {
 		colQuerier := utils.M{"status": 1}
 		colSorter := []string{"-order", "-create_time"}
 		hasModule := map[string]bool{}
-		roles := a.SESSION["role"]
 		query := mgoServer.C(ColModule).Find(colQuerier).Select(colSelector).Sort(colSorter...)
 		iter := query.Iter()
 		for {
@@ -91,7 +87,7 @@ func (a *Application) getModule(showAll bool) {
 
 			if showAll {
 				cols = append(cols, col)
-			} else {
+			} else if roles, ok := a.SESSION["role"]; ok {
 				for _, role := range roles.([]ModelRole) {
 					if _, ok := hasModule[col.Path]; !ok {
 						switch role.Right["scope"].(string) {

@@ -39,7 +39,7 @@ func init() {
 
 			i = sum
 		case "%":
-			i = float64(int64(ifs[0]) % int64(ifs[1]))
+			i = ifs[0] % ifs[1]
 		case "==":
 			i = ifs[0] == ifs[1]
 		case "!=":
@@ -52,6 +52,32 @@ func init() {
 			i = ifs[0] < ifs[1]
 		case "<=":
 			i = ifs[0] <= ifs[1]
+		case "+=":
+			a, b := ifs[0], ifs[1]
+			toMax := a
+			if a < b {
+				toMax = b
+			}
+
+			arr := []int{}
+			for j := a; j <= toMax; j++ {
+				arr = append(arr, j)
+			}
+
+			i = arr
+		case "-=":
+			a, b := ifs[0], ifs[1]
+			toMin := b
+			if a < b {
+				toMin = a
+			}
+
+			arr := []int{}
+			for j := a; j >= toMin; j-- {
+				arr = append(arr, j)
+			}
+
+			i = arr
 		}
 		return i
 	}
@@ -88,7 +114,7 @@ func init() {
 
 			i = sum
 		case "%":
-			i = float64(int64(ifs[0]) % int64(ifs[1]))
+			i = ifs[0] % ifs[1]
 		case "==":
 			i = ifs[0] == ifs[1]
 		case "!=":
@@ -101,6 +127,32 @@ func init() {
 			i = ifs[0] < ifs[1]
 		case "<=":
 			i = ifs[0] <= ifs[1]
+		case "+=":
+			a, b := ifs[0], ifs[1]
+			toMax := a
+			if a < b {
+				toMax = b
+			}
+
+			arr := []int32{}
+			for j := a; j <= toMax; j++ {
+				arr = append(arr, j)
+			}
+
+			i = arr
+		case "-=":
+			a, b := ifs[0], ifs[1]
+			toMin := b
+			if a < b {
+				toMin = a
+			}
+
+			arr := []int32{}
+			for j := a; j >= toMin; j-- {
+				arr = append(arr, j)
+			}
+
+			i = arr
 		}
 		return i
 	}
@@ -137,7 +189,7 @@ func init() {
 
 			i = sum
 		case "%":
-			i = float64(int64(ifs[0]) % int64(ifs[1]))
+			i = ifs[0] % ifs[1]
 		case "==":
 			i = ifs[0] == ifs[1]
 		case "!=":
@@ -150,6 +202,32 @@ func init() {
 			i = ifs[0] < ifs[1]
 		case "<=":
 			i = ifs[0] <= ifs[1]
+		case "+=":
+			a, b := ifs[0], ifs[1]
+			toMax := a
+			if a < b {
+				toMax = b
+			}
+
+			arr := []int64{}
+			for j := a; j <= toMax; j++ {
+				arr = append(arr, j)
+			}
+
+			i = arr
+		case "-=":
+			a, b := ifs[0], ifs[1]
+			toMin := b
+			if a < b {
+				toMin = a
+			}
+
+			arr := []int64{}
+			for j := a; j >= toMin; j-- {
+				arr = append(arr, j)
+			}
+
+			i = arr
 		}
 		return i
 	}
@@ -186,7 +264,7 @@ func init() {
 
 			i = sum
 		case "%":
-			i = float64(int64(ifs[0]) % int64(ifs[1]))
+			i = int32(ifs[0]) % int32(ifs[1])
 		case "==":
 			i = ifs[0] == ifs[1]
 		case "!=":
@@ -199,6 +277,32 @@ func init() {
 			i = ifs[0] < ifs[1]
 		case "<=":
 			i = ifs[0] <= ifs[1]
+		case "+=":
+			a, b := ifs[0], ifs[1]
+			toMax := a
+			if a < b {
+				toMax = b
+			}
+
+			arr := []float32{}
+			for j := a; j <= toMax; j++ {
+				arr = append(arr, j)
+			}
+
+			i = arr
+		case "-=":
+			a, b := ifs[0], ifs[1]
+			toMin := b
+			if a < b {
+				toMin = a
+			}
+
+			arr := []float32{}
+			for j := a; j >= toMin; j-- {
+				arr = append(arr, j)
+			}
+
+			i = arr
 		}
 		return i
 	}
@@ -235,7 +339,7 @@ func init() {
 
 			i = sum
 		case "%":
-			i = float64(int64(ifs[0]) % int64(ifs[1]))
+			i = int64(ifs[0]) % int64(ifs[1])
 		case "==":
 			i = ifs[0] == ifs[1]
 		case "!=":
@@ -248,6 +352,32 @@ func init() {
 			i = ifs[0] < ifs[1]
 		case "<=":
 			i = ifs[0] <= ifs[1]
+		case "+=":
+			a, b := ifs[0], ifs[1]
+			toMax := a
+			if a < b {
+				toMax = b
+			}
+
+			arr := []float64{}
+			for j := a; j <= toMax; j++ {
+				arr = append(arr, j)
+			}
+
+			i = arr
+		case "-=":
+			a, b := ifs[0], ifs[1]
+			toMin := b
+			if a < b {
+				toMin = a
+			}
+
+			arr := []float64{}
+			for j := a; j >= toMin; j-- {
+				arr = append(arr, j)
+			}
+
+			i = arr
 		}
 		return i
 	}
@@ -321,70 +451,8 @@ func init() {
 						v = 0
 					}
 					is = append(is, int(v))
-				}
-			}
-			vi = is
-		case int32:
-
-			is := []int32{xs[0].(int32)}
-			for i := 1; i < l; i++ {
-				switch xs[i].(type) {
-				case int:
-					is = append(is, int32(xs[i].(int)))
-				case int32:
-					is = append(is, xs[i].(int32))
-				case float32:
-					is = append(is, int32(xs[i].(float32)))
-				case float64:
-					is = append(is, int32(xs[i].(float64)))
-				case int64:
-					is = append(is, int32(xs[i].(int64)))
-				case string:
-					v, err := strconv.ParseInt(xs[i].(string), 10, 64)
-					if err != nil {
-						v = 0
-					}
-					is = append(is, int32(v))
-				}
-			}
-			vi = is
-		case float32:
-			is := []float32{xs[0].(float32)}
-			for i := 1; i < l; i++ {
-				switch xs[i].(type) {
-				case int:
-					is = append(is, float32(xs[i].(int)))
-				case int32:
-					is = append(is, float32(xs[i].(int32)))
-				case float32:
-					is = append(is, xs[i].(float32))
-				case float64:
-					is = append(is, float32(xs[i].(float64)))
-				case int64:
-					is = append(is, float32(xs[i].(int64)))
-				case string:
-					v, err := strconv.ParseFloat(xs[i].(string), 64)
-					if err != nil {
-						v = 0
-					}
-					is = append(is, float32(v))
-				}
-			}
-			vi = is
-		case float64:
-			is := []float64{xs[0].(float64)}
-			for i := 1; i < l; i++ {
-				switch xs[i].(type) {
-				case int:
-					is = append(is, float64(xs[i].(int)))
-				case int32:
-					is = append(is, float64(xs[i].(int32)))
-				case float32:
-					is = append(is, float64(xs[i].(float32)))
-				case float64:
-					is = append(is, xs[i].(float64))
-				case int64:
-					is = append(is, float64(xs[i].(int64)))
+				default:
+					is = append(is, int(0))
 				}
 			}
 			vi = is
@@ -408,6 +476,27 @@ func init() {
 						v = 0
 					}
 					is = append(is, v)
+				default:
+					is = append(is, int64(0))
+				}
+			}
+			vi = is
+		case float64:
+			is := []float64{xs[0].(float64)}
+			for i := 1; i < l; i++ {
+				switch xs[i].(type) {
+				case int:
+					is = append(is, float64(xs[i].(int)))
+				case int32:
+					is = append(is, float64(xs[i].(int32)))
+				case float32:
+					is = append(is, float64(xs[i].(float32)))
+				case float64:
+					is = append(is, xs[i].(float64))
+				case int64:
+					is = append(is, float64(xs[i].(int64)))
+				default:
+					is = append(is, float64(0))
 				}
 			}
 			vi = is
@@ -432,24 +521,77 @@ func init() {
 					is = append(is, s)
 				case string:
 					is = append(is, xs[i].(string))
+				default:
+					is = append(is, "")
+				}
+			}
+			vi = is
+		case int32:
+			is := []int32{xs[0].(int32)}
+			for i := 1; i < l; i++ {
+				switch xs[i].(type) {
+				case int:
+					is = append(is, int32(xs[i].(int)))
+				case int32:
+					is = append(is, xs[i].(int32))
+				case float32:
+					is = append(is, int32(xs[i].(float32)))
+				case float64:
+					is = append(is, int32(xs[i].(float64)))
+				case int64:
+					is = append(is, int32(xs[i].(int64)))
+				case string:
+					v, err := strconv.ParseInt(xs[i].(string), 10, 64)
+					if err != nil {
+						v = 0
+					}
+					is = append(is, int32(v))
+				default:
+					is = append(is, int32(0))
+				}
+			}
+			vi = is
+		case float32:
+			is := []float32{xs[0].(float32)}
+			for i := 1; i < l; i++ {
+				switch xs[i].(type) {
+				case int:
+					is = append(is, float32(xs[i].(int)))
+				case int32:
+					is = append(is, float32(xs[i].(int32)))
+				case float32:
+					is = append(is, xs[i].(float32))
+				case float64:
+					is = append(is, float32(xs[i].(float64)))
+				case int64:
+					is = append(is, float32(xs[i].(int64)))
+				case string:
+					v, err := strconv.ParseFloat(xs[i].(string), 64)
+					if err != nil {
+						v = 0
+					}
+					is = append(is, float32(v))
+				default:
+					is = append(is, float32(0))
 				}
 			}
 			vi = is
 		}
+
 		var i interface{}
 		switch ifs := vi.(type) {
 		case []int:
 			i = opInt(op, ifs)
-		case []int32:
-			i = opInt32(op, ifs)
 		case []int64:
 			i = opInt64(op, ifs)
-		case []float32:
-			i = opFloat32(op, ifs)
 		case []float64:
 			i = opFloat64(op, ifs)
 		case []string:
 			i = opString(op, ifs)
+		case []int32:
+			i = opInt32(op, ifs)
+		case []float32:
+			i = opFloat32(op, ifs)
 		}
 		return i
 	})

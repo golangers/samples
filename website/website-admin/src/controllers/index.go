@@ -25,6 +25,11 @@ func (p *PageIndex) Init() {
 func (p *PageIndex) Index() {
 }
 
+func (p *PageIndex) Account() {
+	username := p.SESSION[p.M["SESSION_UNAME"].(string)]
+	p.Body = username
+}
+
 func (p *PageIndex) Login() {
 	if p.R.Method == "POST" {
 		if _, ok := p.POST["ajax"]; ok {
@@ -74,10 +79,7 @@ func (p *PageIndex) Login() {
 }
 
 func (p *PageIndex) Logout() {
-	sessionSign := p.COOKIE[p.Session.CookieName]
-	if sessionSign != "" {
-		p.Session.Clear(sessionSign)
-	}
+	p.SESSION = nil
 
 	http.Redirect(p.RW, p.R, "/login.html", http.StatusFound)
 }

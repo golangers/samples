@@ -2,25 +2,47 @@
 ##
 #以下是全部可配置的配置项，如果希望使用系统默认值，请直接注视掉改行配置项即可
 #如: 
-#"Debug"                    : true,
+#   #"Debug"                    : false,
 ##
 
+#是否开启调试功能
+#"Debug"                    : true,
+#是否支持静态文件检索功能
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+"SupportStatic"             : true,
+#根路径下的静态资源检索，使用逗号(,)分隔
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+#"RootStaticFiles"          : "favicon.ico",
 #是否开启SESSION功能
 # *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
 #"SupportSession"           : true,
+#Session类型设置：可选择类型为：(memory,file). 默认为memory.
+#"SessionType"                : "file",
+#是否开启COOKIE_SESSION功能
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+#"SupportCookieSession"      : true,
+#"SupportI18n"               : true,
+#"DefaultLanguage"           : "zh-cn",
+#"DefaultLocalePath"         : "./locale/",
 #是否支持模板渲染,一般在开发纯粹的web server的时候会关闭，来提高性能
 "SupportTemplate"           : true,
 #是否开启自动生成HTML的功能
 #"AutoGenerateHtml"         : true,
 #自动生成HTML的周期。单位：秒
-#"AutoGenerateHtmlCycleTime": 3600,
+"AutoGenerateHtmlCycleTime": 3600,
+#自动生成HTML后自动加载静态HTML文件
+#"AutoLoadStaticHtml"       : false,
+#加载静态HTML的时候，是否带上逻辑处理
+#"LoadStaticHtmlWithLogic"  : false,
+#是否以静态html目录为根路径
+#"ChangeSiteRoot"           : true,
 #生成静态html文件后是否需要自动跳转到静态页面
-#"AutoJumpToHtml"           : true,
-#是否开启调试功能
-#"Debug"                    : true,
-#静态资源目录
+#"AutoJumpToHtml"          : true,
+#资源目录
 # *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
-"StaticDirectory"          : "./static/",
+"AssetsDirectory"          : "./assets/",
+#静态资源目录
+"StaticDirectory"          : "static/",
 #模板主题目录
 "ThemeDirectory"           : "theme/",
 #模板主题

@@ -1,0 +1,42 @@
+{{template "main_header" .}}
+
+<div class="container">
+        <div class="row">
+            <div class="span3">
+            	{{template "setting_left" .}}
+              </div>
+
+              <div class="span9">
+              	<div class="hero-unit">
+	                <div>
+	                  <h2 class="pull-left">您的注册信息</h2><h2 class="pull-right"><a href="/setting/info_update.html">修改信息</a></h2>
+	                </div>
+	                <table class="table table-bordered table-condensed">
+	                  <tbody>
+	                  	  <tr>
+	                        <td>用户名</td>
+	                        <td>{{.D.Body.Name}}</td>
+	                      </tr>
+
+	                      <tr>
+	                        <td>邮箱地址</td>
+	                        <td>{{.D.Body.Email}}</td>
+	                      </tr>
+
+	                      <tr>
+	                        <td>创建时间</td>
+	                        <td>{{GetTimeToStr .D.Body.Create_time}}</td>
+	                      </tr>
+
+	                      <tr>
+	                        <td>最后更新</td>
+	                         <td>{{GetTimeToStr .D.Body.Update_time}}</td>
+	                      </tr>
+	                  </tbody>
+	                </table>
+              </div>
+            </div>
+        </div>
+</div>
+
+{{template "footer" .}}

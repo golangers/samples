@@ -1,0 +1,74 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.link{
+	cursor: pointer;
+}
+.link:hover{
+	
+}
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.static_table{
+}
+
+.static_table tbody tr:hover td, .static_table tbody tr:hover th {
+	background-color: transparent;
+}
+.static_table th{
+	padding: 10px;
+}
+.static_table td{
+	padding: 10px 0;
+}
+
+.model_actions{
+	display: none;
+}
+
+.icon-blank{
+	background-position: -312px 0;
+	float: right;
+	margin-top: 2px;
+
+	cursor: pointer;
+}
+
+li.current{
+	background-color: whitesmoke;
+}
+li.chosen .icon-blank{
+	background-position: -288px 0;
+}
+
+.model_td{
+	width: 40%;
+}
+
+.models li, .actions li{
+	padding: 10px;
+	width: 70%;
+}
+.models li{
+	font-weight: bold;
+	cursor: default;
+}
+
+ul.inline{
+	display: inline-block;
+}
+ul.inline li{
+	display: inline-block;
+}

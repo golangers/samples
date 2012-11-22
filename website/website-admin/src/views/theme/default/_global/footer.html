@@ -2,12 +2,13 @@
     <div class="container">
         <hr>
         <footer>
-          <p>Copyright <a href="https://github.com/golangers">Golanger Web Framework</a></p>
+          <p>{{.Config.Sitename}} 版权所有</p>
         </footer>
     </div>
     <script type="text/javascript" src="{{.D.Static}}add-on/chosen/chosen.jquery.min.js"></script>
     <script type="text/javascript" src="{{.D.Static}}add-on/bootstrap-2.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{.D.Static}}add-on/json/json.min.js"></script>{{if .D.GlobalJsFile}}
+    <script type="text/javascript" src="{{.D.Static}}add-on/json/json.min.js"></script>
+    <script type="text/javascript" src="{{.D.Static}}add-on/kindeditor-4.1.2/kindeditor-min.js"></script>{{if .D.GlobalJsFile}}
     <script type="text/javascript" src="{{.D.GlobalJsFile}}"></script>{{end}}{{if .D.GlobalIndexJsFile}}
     <script type="text/javascript" src="{{.D.GlobalIndexJsFile}}"></script>{{end}}{{if .D.IndexJsFile}}
     <script type="text/javascript" src="{{.D.IndexJsFile}}"></script>{{end}}

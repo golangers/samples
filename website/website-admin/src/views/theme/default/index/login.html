@@ -1,34 +1,33 @@
 {{template "header" .}}
     <div class="container">
         <div class="hero-unit">
-            <h1>Hello, world!</h1>
-            <p>{{.Config.Sitename}}</p>
+            <h1>{{.Config.Sitename}}</h1>
             <hr>
             <p>
                 <div class="row-fluid">
                     <div class="span3">
-                        <!-- <img src="{{.D.Img.global}}logo.png"> -->
+                        <!-- <img src="logo.png"> -->
                     </div>
                     <div class="span9">
                         <div class="form-horizontal" id="login">
                             <fieldset>
                                 <div class="control-group">
-                                    <label class="control-label" for="username">User</label>
+                                    <label class="control-label" for="username">用户名</label>
                                     <div class="controls">
-                                        <input class="input-large" name="username" type="text" placeholder="User">
+                                        <input class="input-large" name="username" type="text" placeholder="用户名">
                                         <span class="help-inline" style="display:none"></span>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label" for="password">Password</label>
+                                    <label class="control-label" for="password">密&nbsp&nbsp&nbsp码</label>
                                     <div class="controls">
-                                        <input class="input-large" name="password" type="password" placeholder="Password">
+                                        <input class="input-large" name="password" type="password" placeholder="密码">
                                         <span class="help-inline" style="display:none"></span>
                                     </div>
                                 </div>
                                 <div class="form-actions">
-                                    <button type="button" id="btn_login" class="btn btn-large btn-primary">Login</button>
-                                    <button type="reset" class="btn btn-large btn-inverse">Reset</button>
+                                    <button type="button" id="btn_login" class="btn btn-large btn-primary">登陆</button>
+                                    <button type="reset" class="btn btn-large btn-inverse">取消</button>
                                 </div>
                             </fieldset>
                         </div>

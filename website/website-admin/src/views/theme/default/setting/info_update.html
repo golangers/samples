@@ -1,0 +1,42 @@
+{{template "main_header" .}}
+
+<div class="container">
+        <div class="row">
+            <div class="span3">
+                {{template "setting_left" .}}
+            </div>
+
+            <div class="span9">
+                <div class="hero-unit">
+                <div align="left">
+                    <h2>修改信息</h2>
+                </div>
+                <br/>
+                <form class="form-horizontal" id="update">
+                    <fieldset id="fieldset">
+                        <div class="control-group">
+                            <label class="control-label" for="email">邮&nbsp&nbsp&nbsp箱</label>
+                            <div class="controls">
+                                <input class="input-large" name="email" type="email">
+                                <span class="help-inline" style="display:">空值：不更新</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="password">密&nbsp&nbsp&nbsp码</label>
+                            <div class="controls">
+                                <input class="input-large" name="password" type="password">
+                                <span class="help-inline" style="display:">空值：不更新</span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" id="btn_update" class="btn btn-large btn-primary">更新</button>
+                            <button type="reset" id="btn_cancel" data-dismiss="modal" class="btn btn-large btn-inverse">取消</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            </div>
+        </div>
+</div>
+
+{{template "footer" .}}

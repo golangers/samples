@@ -1,0 +1,70 @@
+{{template "main_header" .}}
+<div class="hero-unit">
+    <div class="row-fluid">
+        {{if .D.Body.art}}
+        {{$art := .D.Body.art}}
+        {{$category := .D.Body.category}}
+        <script type="text/javascript">
+            var artCategory = "{{$art.Category}}";
+        </script>
+        <form class="form-horizontal" id="update" method="post" enctype="application/x-www-form-urlencoded">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="update_art_title">文章名</label>
+                    <div class="controls">
+                        <input class="input-large" id="update_art_title" name="title" type="text" placeholder="文章名" value="{{$art.Title}}">
+                        <span class="help-inline" style="display:none"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">文章属性</label>
+                    <div class="controls">
+                        <label>置顶 :<input class="input-small" style="width:30px;" id="update_art_top" name="top" type="number" min="0" value="{{$art.Top}}" /><span class="help-inline" style="display:">数值越大，文章越靠前</span></label>
+                        <label>热门 :<input class="input-small" style="width:30px;" id="update_art_hot" name="hot" type="number" min="0" value="{{$art.Hot}}" /><span class="help-inline" style="display:">数值越大，文章越靠前</span></label>
+                        <label>普通排序 :<input class="input-small" style="width:30px;" id="update_art_order" name="order" type="number" min="0" value="{{$art.Order}}" /><span class="help-inline" style="display:">数值越大，文章越靠前</span></label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="update_art_target_href">跳转URL</label>
+                    <div class="controls">
+                        <input class="input-large" id="update_art_target_href" name="target_href" type="text" placeholder="跳转URL" value="{{$art.TargetHref}}">
+                        <span class="help-inline" style="display:none"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="update_art_category">文章类别</label>
+                    <div class="controls">
+                        <select id="update_art_category" name="category" data-placeholder="文章类别" class="input-large">
+                            <option value=""></option>
+                            {{range $category}}
+                            <option value="{{.Id.Hex}}">{{.Name}}</option>
+                            {{end}}
+                        </select>
+                        <span class="help-inline" style="display:none"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="update_art_summary">文章简介</label>
+                    <div class="controls">
+                        <textarea id="update_art_summary" style="width:588px;height:80px;" name="summary" placeholder="文章简介">{{$art.Summary}}</textarea>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="update_art_content">文章内容</label>
+                    <div class="controls">
+                        <textarea class="input-large" id="update_art_content" style="width:600px;height:300px;visibility:hidden;" name="content" placeholder="文章内容">{{$art.Content}}</textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <input type="hidden" name="id" value="{{$art.Id.Hex}}">
+                    <button type="submit" id="btn_update" class="btn btn-primary">修改</button>
+                    <button type="reset" class="btn" />重置</button>
+                </div>
+            </fieldset>
+        </form>
+        {{else}}
+        无此文章
+        {{end}}
+    </div>
+</div>
+{{template "main_footer" .}}

@@ -1,4 +1,5 @@
 {{define "main_header"}}{{template "header" .}}
+{{$siteroot := .Siteroot}}
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
@@ -13,15 +14,15 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">User</a></li>
+                        <li><a href="{{$siteroot}}setting/info.html">个人信息</a></li>
                         <li class="divider"></li>
-                        <li><a href="/logout.html">Logout</a></li>
+                        <li><a href="{{$siteroot}}logout.html">退出</a></li>
                     </ul>
                 </div>
                 <a class="brand" href="{{.Siteroot}}index.html">{{.Config.Sitename}}</a>
                 <div class="nav-collapse">
-                    <ul class="nav">{{$siteroot := .Siteroot}}
-                        <li><a href="{{$siteroot}}">Home</a></li>
+                    <ul class="nav">
+                        <li><a href="{{$siteroot}}">首页</a></li>
                         {{range .S.modules}}
                         <li><a href="{{$siteroot}}{{.Path}}">{{.Name}}</a></li>
                         {{end}}
@@ -30,7 +31,15 @@
             </div>
         </div>
     </div>
+    {{if .O_S}}
+    <div id="message" class="alert {{.O_S.type}}" style="display:">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <span>{{.O_S.message}}</span>
+    </div>
+    {{else}}
     <div id="message" class="alert" style="display:none">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <span></span>
-    </div>{{end}}
+    </div>
+    {{end}}
+    {{end}}
