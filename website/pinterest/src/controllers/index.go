@@ -65,7 +65,7 @@ func (p *PageIndex) Upload(w http.ResponseWriter, r *http.Request) {
 			Class:      class,
 			Name:       fileName,
 			Ext:        fileExt,
-			Path:       filePath[1:],
+			Path:       filePath[len(p.AssetsDirectory):],
 			Status:     1,
 			CreateTime: time.Now().Unix(),
 		})
