@@ -18,7 +18,7 @@ var (
 )
 
 func main() {
-	runtime.GOMAXPROCS(runtime.NumCPU()*2 + 1)
+	runtime.GOMAXPROCS(runtime.NumCPU() - 1)
 
 	flag.Parse()
 	os.Chdir(filepath.Dir(os.Args[0]))
