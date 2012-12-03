@@ -2,11 +2,16 @@
 ##
 #以下是全部可配置的配置项，如果希望使用系统默认值，请直接注视掉改行配置项即可
 #如: 
-#   #"Debug"                    : false,
+#   #"Log"                    : false,
 ##
 
-#是否开启调试功能
-#"Debug"                    : true,
+#是否开启日志功能
+#"Log"                    : true,
+#日志写入对象, 支持如下对象：控制台(console)
+#"LogWriteTo"             : "console",
+#日志记录的级别,支持的日志级别为: disable(关闭), all(所有), debug(调试), info(信息), warn(警告), error(错误), critical(严重), panic(恐慌), fatal(致命)
+#值为空则使用系统默认级别，日志级别支持组合形式，中间用逗号(,)分隔如：warn, error. 
+#"LogLevel"                : "all",
 #是否支持静态文件检索功能
 # *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
 "SupportStatic"             : true,
