@@ -71,6 +71,27 @@ func (p *PageIndex) TestPage(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(fmt.Sprintf("%v", p.SESSION["Int64"])))
 }
 
+func (p *PageIndex) TestValidation(w http.ResponseWriter, r *http.Request) {
+	p.Validation.Min(5, 7).Key("test").Message("最小值为7")
+	if p.Validation.HasErrors() {
+		p.Validation.Keep()
+		w.Write([]byte(fmt.Sprintf("%v", p.Validation.ErrorMap())))
+	}
+
+	w.Write([]byte(`<a href="test_validation1">验证下一页是否有关联</a>`))
+}
+
+func (p *PageIndex) TestValidation1(w http.ResponseWriter, r *http.Request) {
+	if p.Validation.HasErrors() {
+		p.Validation.Keep()
+		w.Write([]byte(fmt.Sprintf("%v", p.Validation.ErrorMap())))
+	} else {
+		w.Write([]byte("没错误"))
+	}
+
+	w.Write([]byte(`<a href="test_validation">返回上一页看看错误</a>`))
+}
+
 func (p *PageIndex) Filter_getIndex() {
 	fmt.Println("GetIndex")
 }
