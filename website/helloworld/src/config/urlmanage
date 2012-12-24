@@ -1,0 +1,8 @@
+#重写规则
+"SupportUrlManage": true,
+#对转义符,在json中,需要再次转义一次，如期望“\d”,那需要输入"\\d"
+"UrlManageRule": [
+    "^/index_(\\d{1,}).html$    /index.html?id=${1} [L]",
+    "^/testpage_(\\d{1,}).html?$   /test_page.html?id=${1} [QSA,L]",
+    "^/golanger.html$ http://golanger.com [R=302,L]"
+]
