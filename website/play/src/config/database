@@ -1,0 +1,8 @@
+#数据库地址
+"Database"                 : {
+    #MongoDB DNS
+    # *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+    #"MongoDB" : "mongodb://127.0.0.1/website",
+    #Mysql DNS
+    #"Mysql" : "tcp://127.0.0.1:3306/DatabaseName/user/password",
+}

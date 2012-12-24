@@ -1,0 +1,8 @@
+#是否开启SESSION功能
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+#"SupportSession"           : true
+#Session类型设置：可选择类型为：(memory,file). 默认为memory.
+#"SessionType"                : "file",
+#是否开启COOKIE_SESSION功能
+# *此配置项，在程序运行后，不建议再做设置，以免引起未知错误。建议如有改动，请尽可能在停止程序后进行。
+#"SupportCookieSession"      : true

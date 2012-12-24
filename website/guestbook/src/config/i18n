@@ -1,0 +1,4 @@
+#是否开启i18n功能
+#"SupportI18n"               : true,
+#"DefaultLanguage"           : "zh-cn",
+#"DefaultLocalePath"         : "./locale/",

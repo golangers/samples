@@ -15,8 +15,8 @@ import (
 )
 
 var (
-	addr       = flag.String("addr", ":80", "Server port")
-	configPath = flag.String("config", "./config/site", "site filepath of config")
+	addr      = flag.String("addr", ":80", "Server port")
+	configDir = flag.String("config", "./config", "Directory of config")
 )
 
 func main() {
@@ -25,9 +25,9 @@ func main() {
 	flag.Parse()
 	os.Chdir(filepath.Dir(os.Args[0]))
 	fmt.Println("Listen server address: " + *addr)
-	fmt.Println("Read configuration file success, fithpath: " + filepath.Join(filepath.Dir(os.Args[0]), *configPath))
+	fmt.Println("Read configuration directory success, directory: " + filepath.Join(filepath.Dir(os.Args[0]), *configDir))
 
-	App.Load(*configPath)
+	App.Load(*configDir)
 
 	if sqliteDns, ok := App.Database["Sqlite"]; ok && sqliteDns != "" {
 		sqlite, err := sql.Open("sqlite3", sqliteDns)

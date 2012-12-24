@@ -1,0 +1,20 @@
+#是否支持模板渲染,一般在开发纯粹的web server的时候会关闭，来提高性能
+"SupportTemplate"           : true,
+#模板主题目录
+"ThemeDirectory"           : "theme/",
+#模板主题
+"Theme"                    : "default",
+#静态资源Css存放目录
+"StaticCssDirectory"       : "css/",
+#静态资源Js存放目录
+"StaticJsDirectory"        : "js/",
+#静态资源Image存放目录
+"StaticImgDirectory"       : "img/",
+#静态资源Html存放目录,存放自动生成的html静态文件
+"HtmlDirectory"            : "html/",
+#模板目录
+"TemplateDirectory"        : "./views/",
+#存放全局模板的目录
+"TemplateGlobalDirectory"  : "_global/",
+#从全局模板目录检索的文件 “*”代表全部，“file,file”逗号分隔的代表只检索出这些文件
+"TemplateGlobalFile"       : "*"
