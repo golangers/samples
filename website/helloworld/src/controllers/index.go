@@ -48,6 +48,8 @@ func (p *PageIndex) After_Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func (p *PageIndex) Index(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.URL.Query())
+	fmt.Println("id:", p.GET["id"])
 	p.SESSION["String"] = "String"
 	p.SESSION["string"] = "string"
 	p.SESSION["Int"] = 1
