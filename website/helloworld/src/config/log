@@ -1,5 +1,5 @@
 #是否开启日志功能
-#"SupportLog"                    : true
+#"SupportLog"                    : true,
 #日志写入对象, 支持如下对象：控制台(console)
 #"LogWriteTo"             : "console",
 #日志记录的级别,支持的日志级别为: disable(关闭), all(所有), debug(调试), info(信息), warn(警告), error(错误), critical(严重), panic(恐慌), fatal(致命)
