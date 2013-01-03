@@ -26,8 +26,8 @@
                     <td style="display:none">{{.Parent.Hex}}</td>
                     <td>{{call $getCategory .Parent.Hex}}</td>
                     <td>{{.Order}}</td>
-                    <td>{{GetTimeToStr .CreateTime}}</td>
-                    <td>{{GetTimeToStr .UpdateTime}}</td>
+                    <td>{{UnixToStr .CreateTime}}</td>
+                    <td>{{UnixToStr .UpdateTime}}</td>
                     <td>
                         <input class="btn btn-danger" type="button" op="op_delete" value="删除">
                         <input class="btn btn-info" type="button" op="op_update" value="修改">

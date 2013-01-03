@@ -25,12 +25,12 @@
 
 	                      <tr>
 	                        <td>创建时间</td>
-	                        <td>{{GetTimeToStr .D.Body.Create_time}}</td>
+	                        <td>{{UnixToStr .D.Body.Create_time}}</td>
 	                      </tr>
 
 	                      <tr>
 	                        <td>最后更新</td>
-	                         <td>{{GetTimeToStr .D.Body.Update_time}}</td>
+	                         <td>{{UnixToStr .D.Body.Update_time}}</td>
 	                      </tr>
 	                  </tbody>
 	                </table>

@@ -34,7 +34,7 @@ func (p *PageTodo) New(w http.ResponseWriter, r *http.Request) {
 		if title, ok := p.POST["title"]; ok {
 			todo := models.Todo{
 				Title:    template.HTMLEscapeString(title),
-				PostDate: utils.NewTime().GetTimeToStr(time.Now().Unix()),
+				PostDate: utils.NewTime().UnixToStr(time.Now().Unix()),
 			}
 			_, err := models.SaveTodo(todo)
 			if err == nil {
@@ -67,7 +67,7 @@ func (p *PageTodo) Edit(w http.ResponseWriter, r *http.Request) {
 			todo := models.Todo{
 				Id:       id,
 				Title:    template.HTMLEscapeString(title),
-				PostDate: utils.NewTime().GetTimeToStr(time.Now().Unix()),
+				PostDate: utils.NewTime().UnixToStr(time.Now().Unix()),
 			}
 			_, err := models.UpdateTodo(todo)
 			if err == nil {
@@ -107,7 +107,7 @@ func (p *PageTodo) Finish(w http.ResponseWriter, r *http.Request) {
 				finished = 1
 			}
 
-			postDate := utils.NewTime().GetTimeToStr(time.Now().Unix())
+			postDate := utils.NewTime().UnixToStr(time.Now().Unix())
 			var db = Middleware.Get("db").(*sql.DB)
 			sql := "UPDATE todo SET finished = " + strconv.Itoa(finished) + ", post_date = \"" + postDate + "\" WHERE id = " + strconv.Itoa(id)
 			_, err := db.Exec(sql)

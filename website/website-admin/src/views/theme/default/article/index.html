@@ -30,8 +30,8 @@
                     <td style="display:none">{{.Id.Hex}}</td>
                     <td>{{.Title}}</td>
                     <td>{{call $getCategory .Category.Hex}}</td>
-                    <td>{{GetTimeToStr .CreateTime}}</td>
-                    <td>{{GetTimeToStr .UpdateTime}}</td>
+                    <td>{{UnixToStr .CreateTime}}</td>
+                    <td>{{UnixToStr .UpdateTime}}</td>
                     <td>
                         <a href="update.html?id={{.Id.Hex}}" target="_blank" class="btn btn-info">修改</a>
                         <input class="btn btn-warning" type="button" op="op_stop" value="{{if .Status}}停用{{else}}启用{{end}}">

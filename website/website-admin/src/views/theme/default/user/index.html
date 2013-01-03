@@ -19,8 +19,8 @@
 	    		<tr> 
 	      			<td>{{.Name}}</td>
 	      			<td>{{.Email}}</td>
-	      			<td>{{GetTimeToStr .Create_time}}</td>
-	      			<td>{{GetTimeToStr .Update_time}}</td>
+	      			<td>{{UnixToStr .Create_time}}</td>
+	      			<td>{{UnixToStr .Update_time}}</td>
 	      			<td>
 	      				<input class="btn btn-danger" type="button" op="user_delete" value="删除">
 	      				<input class="btn btn-info" type="button" op="user_update" value="修改">

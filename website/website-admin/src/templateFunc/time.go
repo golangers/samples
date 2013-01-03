@@ -6,7 +6,7 @@ import (
 )
 
 func init() {
-	App.AddTemplateFunc("GetTimeToStr", func(tm int64) string {
-		return utils.NewTime().GetTimeToStr(tm)
+	App.AddTemplateFunc("UnixToStr", func(tm int64) string {
+		return utils.NewTime().UnixToStr(tm)
 	})
 }
