@@ -88,10 +88,7 @@ func (p *PageInstall) Index() {
 
 		ioutil.WriteFile(fileInstallLock, []byte("installed"), 0777)
 
-		sessionSign := p.COOKIE[p.Session.CookieName]
-		if sessionSign != "" {
-			p.Session.Clear(sessionSign)
-		}
+		p.SESSION = nil
 
 		p.RW.Write([]byte("安装成功...<br/>用户名:" + username + ",密码:" + password + "<br/>"))
 	}
