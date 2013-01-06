@@ -2,7 +2,7 @@ package helper
 
 import (
 	"encoding/gob"
-	"golanger.com/framework/utils"
+	"golanger.com/utils"
 	"labix.org/v2/mgo"
 	"labix.org/v2/mgo/bson"
 	"log"

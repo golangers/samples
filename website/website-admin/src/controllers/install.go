@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	. "golanger.com/framework/middleware"
-	"golanger.com/framework/utils"
+	. "golanger.com/middleware"
+	"golanger.com/utils"
 	"helper"
 	"io/ioutil"
 	. "models"

@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	. "golanger.com/framework/middleware"
-	"golanger.com/framework/utils"
 	"golanger.com/framework/web"
+	. "golanger.com/middleware"
+	"golanger.com/utils"
 	"helper"
 	. "models"
 	"net/http"

@@ -2,7 +2,7 @@ package models
 
 import (
 	"encoding/gob"
-	"golanger.com/framework/utils"
+	"golanger.com/utils"
 )
 
 func init() {

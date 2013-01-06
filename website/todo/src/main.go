@@ -6,7 +6,7 @@ import (
 	"flag"
 	"fmt"
 	_ "github.com/mattn/go-sqlite3"
-	. "golanger.com/framework/middleware"
+	. "golanger.com/middleware"
 	"os"
 	"path/filepath"
 	"runtime"

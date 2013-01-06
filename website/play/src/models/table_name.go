@@ -1,7 +1,7 @@
 package models
 
 /*import (
-    "golanger.com/framework/utils"
+    "golanger.com/utils"
 )
 
 var (

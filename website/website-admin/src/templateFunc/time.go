@@ -2,7 +2,7 @@ package templateFunc
 
 import (
 	. "controllers"
-	"golanger.com/framework/utils"
+	"golanger.com/utils"
 )
 
 func init() {

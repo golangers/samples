@@ -1,7 +1,7 @@
 package helper
 
 import (
-	"golanger.com/framework/utils"
+	"golanger.com/utils"
 	"labix.org/v2/mgo"
 	"log"
 	"strings"

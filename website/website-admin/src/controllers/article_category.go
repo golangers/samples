@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"encoding/json"
-	. "golanger.com/framework/middleware"
-	"golanger.com/framework/utils"
+	. "golanger.com/middleware"
+	"golanger.com/utils"
 	"helper"
 	"labix.org/v2/mgo/bson"
 	. "models"

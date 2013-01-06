@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/binary"
 	"fmt"
-	"golanger.com/framework/utils"
+	"golanger.com/utils"
 	"io/ioutil"
 	. "models"
 	"net/http"

@@ -2,8 +2,8 @@ package models
 
 import (
 	"errors"
-	. "golanger.com/framework/middleware"
-	"golanger.com/framework/utils"
+	. "golanger.com/middleware"
+	"golanger.com/utils"
 	"helper"
 	"labix.org/v2/mgo"
 	"labix.org/v2/mgo/bson"

@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"fmt"
-	. "golanger.com/framework/middleware"
+	. "golanger.com/middleware"
 	"helper"
 	"html/template"
 	. "models"

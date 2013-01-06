@@ -7,7 +7,7 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"golanger.com/framework/utils"
+	"golanger.com/utils"
 	"io/ioutil"
 	"net/http"
 	"net/url"

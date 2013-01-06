@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"golanger.com/framework/utils"
+	"golanger.com/utils"
 	. "models"
 	"net/http"
 	"path/filepath"

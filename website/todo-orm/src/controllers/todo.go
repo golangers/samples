@@ -3,8 +3,8 @@ package controllers
 import (
 	"database/sql"
 	"fmt"
-	. "golanger.com/framework/middleware"
-	"golanger.com/framework/utils"
+	. "golanger.com/middleware"
+	"golanger.com/utils"
 	"html/template"
 	"models"
 	"net/http"
