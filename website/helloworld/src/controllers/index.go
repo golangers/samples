@@ -14,6 +14,11 @@ func init() {
 	App.RegisterController("index/", PageIndex{})
 }
 
+func (p *PageIndex) Init(w http.ResponseWriter, r *http.Request) {
+	p.Application.Init(w, r)
+	p.TARGET_LANG = r.URL.Query().Get("lang")
+}
+
 func (p *PageIndex) Before_() []map[string]string {
 	return []map[string]string{
 		map[string]string{
@@ -48,6 +53,7 @@ func (p *PageIndex) After_Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func (p *PageIndex) Index(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(p.TARGET_LANG)
 	fmt.Println(r.URL.Query())
 	fmt.Println("id:", p.GET["id"])
 	p.SESSION["String"] = "String"
