@@ -58,10 +58,11 @@ $(function () {
                         break;
                     }
                     case 1: {
+                        var origin = window.location.protocol+"//"+window.location.host
                         if (json.back_url != "") {
-                            window.location.href = window.location.origin+json.back_url;
+                            window.location.href = origin+json.back_url;
                         } else {
-                            window.location.href = window.location.origin+"/";
+                            window.location.href = origin+"/";
                         }
                         break;
                     }
