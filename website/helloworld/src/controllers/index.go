@@ -82,7 +82,6 @@ func (p *PageIndex) TestPage(w http.ResponseWriter, r *http.Request) {
 func (p *PageIndex) TestValidation(w http.ResponseWriter, r *http.Request) {
 	p.Validation.Min(5, 7).Key("test").Message("最小值为7")
 	if p.Validation.HasErrors() {
-		p.Validation.Keep()
 		w.Write([]byte(fmt.Sprintf("%v", p.Validation.ErrorMap())))
 	}
 
@@ -91,7 +90,6 @@ func (p *PageIndex) TestValidation(w http.ResponseWriter, r *http.Request) {
 
 func (p *PageIndex) TestValidation1(w http.ResponseWriter, r *http.Request) {
 	if p.Validation.HasErrors() {
-		p.Validation.Keep()
 		w.Write([]byte(fmt.Sprintf("%v", p.Validation.ErrorMap())))
 	} else {
 		w.Write([]byte("没错误"))
