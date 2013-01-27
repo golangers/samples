@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	addr      = flag.String("addr", ":80", "Server port")
+	addr = flag.String("addr", ":80", "Server port")
 )
 
 func main() {
@@ -17,6 +17,6 @@ func main() {
 	flag.Parse()
 	fmt.Println("Listen server address: " + *addr)
 
-	App.LoadData(``)
+	//App.LoadData(``)
 	App.ListenAndServe(*addr, App)
 }

@@ -1,57 +1,33 @@
 #!/bin/sh
 APP="pinterest"
 ADDR=":8083"
-PWD=`pwd`/..
 
 echo "Golanger Web Framework"
 echo "Golanger is a lightweight framework for writing web applications in Golang."
 
+if [[ ${1} == "nb" && -f ${APP} ]]; then
+    echo "Runing ${APP}"
+    ./$APP -addr=${ADDR}
+    exit 0
+fi
+
+PWD=`pwd`/..
+GO_GET_LIST="framework/web middleware database/activerecord"
 export GOPATH=${PWD}/src/add-on:${PWD}
 
-if [ ! -d ./add-on/src/golanger.com/framework ]; then
-    echo "go get golanger.com/framework"
-    go get golanger.com/framework
-fi
+goget() {
+    pkg="golanger.com/${1}"
+    if [ ! -d ${pkg} ]; then
+        GOCMD="go get -d ${pkg}"
+        echo ${GOCMD}
+        ${GOCMD}
+    fi 
+}
 
-if [ ! -d ./add-on/src/golanger.com/i18n ]; then
-    echo "go get golanger.com/i18n"
-    go get golanger.com/i18n
-fi
 
-if [ ! -d ./add-on/src/golanger.com/log ]; then
-    echo "go get golanger.com/log"
-    go get golanger.com/log
-fi
-
-if [ ! -d ./add-on/src/golanger.com/session ]; then
-    echo "go get golanger.com/session"
-    go get golanger.com/session
-fi
-
-if [ ! -d ./add-on/src/golanger.com/urlmanage ]; then
-    echo "go get golanger.com/urlmanage"
-    go get golanger.com/urlmanage
-fi
-
-if [ ! -d ./add-on/src/golanger.com/validate ]; then
-    echo "go get golanger.com/validate"
-    go get golanger.com/validate
-fi
-
-if [ ! -d ./add-on/src/golanger.com/utils ]; then
-    echo "go get golanger.com/utils"
-    go get golanger.com/utils
-fi
-
-if [ ! -d ./add-on/src/golanger.com/middleware ]; then
-    echo "go get golanger.com/middleware"
-    go get golanger.com/middleware
-fi
-
-if [ ! -d ./add-on/src/golanger.com/database ]; then
-    echo "go get golanger.com/database"
-    go get golanger.com/database
-fi
+for pkg in ${GO_GET_LIST}; do
+    goget ${pkg}
+done
 
 if [ -f ${APP} ]; then
     rm ${APP}
