@@ -1,9 +1,11 @@
 package main
 
 import (
-	. "controllers"
+	_ "controllers"
 	"flag"
 	"fmt"
+	"golanger.com/webrouter"
+	"net/http"
 	"runtime"
 )
 
@@ -17,6 +19,9 @@ func main() {
 	flag.Parse()
 	fmt.Println("Listen server address: " + *addr)
 
-	//App.LoadData(``)
-	App.ListenAndServe(*addr, App)
+	webrouter.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("favicon.ico")
+	})
+
+	webrouter.ListenAndServe(*addr, nil)
 }

@@ -13,11 +13,12 @@ fi
 
 PWD=`pwd`/..
 GO_GET_LIST="framework/web middleware"
-export GOPATH=${PWD}/src/add-on:${PWD}
+ADD_ON="${PWD}/src/add-on"
+export GOPATH=${ADD_ON}:${PWD}
 
 goget() {
     pkg="golanger.com/${1}"
-    if [ ! -d ${pkg} ]; then
+    if [[ ! -d "${ADD_ON}/src/${pkg}" ]]; then
         GOCMD="go get -d ${pkg}"
         echo ${GOCMD}
         ${GOCMD}
@@ -36,7 +37,7 @@ fi
 echo "Building ${APP}"
 go build .
 
-if [ -f src ]; then
+if [[ -f src ]]; then
     mv ./src ${APP}
     echo "Runing ${APP}"
     ./$APP -addr=${ADDR}
